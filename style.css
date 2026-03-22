@@ -1,0 +1,394 @@
+@import "../tuist/server/assets/app/css/fonts.css";
+@import "../tuist/noora/css/noora.css";
+
+:root {
+  color-scheme: light;
+  --slidev-theme-primary: var(--noora-button-primary-background);
+  --slidev-code-background: var(--noora-surface-background-tertiary);
+  --slidev-code-foreground: var(--noora-surface-label-primary);
+  --slidev-code-font-family: var(--noora-font-code);
+}
+
+html,
+body,
+#app,
+#page-root {
+  background: var(--noora-surface-background-secondary) !important;
+  color: var(--noora-surface-label-primary);
+  font-family: var(--noora-font-body);
+}
+
+.slidev-slide-content {
+  background: transparent !important;
+}
+
+.slidev-layout {
+  box-sizing: border-box;
+  padding: var(--noora-spacing-10) var(--noora-spacing-11) !important;
+  color: var(--noora-surface-label-primary);
+  font-family: var(--noora-font-body);
+  background: var(--noora-surface-background-secondary);
+}
+
+.slidev-layout h1,
+.slidev-layout h2,
+.slidev-layout h3,
+.slidev-layout p,
+.slidev-layout blockquote,
+.slidev-layout ul,
+.slidev-layout ol,
+.slidev-layout table {
+  margin-block: 0;
+}
+
+.slidev-layout h1 {
+  max-inline-size: 16ch;
+  color: var(--noora-surface-label-primary);
+  font: var(--noora-font-weight-medium) var(--noora-font-heading-2xlarge);
+  letter-spacing: -0.04em;
+  text-wrap: balance;
+}
+
+.slidev-layout h2 {
+  color: var(--noora-surface-label-primary);
+  font: var(--noora-font-weight-medium) var(--noora-font-heading-xlarge);
+  letter-spacing: -0.03em;
+  text-wrap: balance;
+}
+
+.slidev-layout h3 {
+  color: var(--noora-surface-label-primary);
+  font: var(--noora-font-weight-medium) var(--noora-font-heading-large);
+}
+
+.slidev-layout p,
+.slidev-layout li {
+  color: var(--noora-surface-label-primary);
+  font: var(--noora-font-weight-regular) var(--noora-font-body-large);
+}
+
+.slidev-layout p + p,
+.slidev-layout p + ul,
+.slidev-layout p + ol,
+.slidev-layout p + blockquote,
+.slidev-layout h1 + p,
+.slidev-layout h2 + p,
+.slidev-layout h3 + p,
+.slidev-layout h1 + blockquote,
+.slidev-layout h2 + blockquote,
+.slidev-layout h3 + blockquote,
+.slidev-layout h1 + ul,
+.slidev-layout h2 + ul,
+.slidev-layout h1 + ol,
+.slidev-layout h2 + ol {
+  margin-top: var(--noora-spacing-6);
+}
+
+.slidev-layout strong {
+  color: var(--noora-surface-label-primary);
+  font-weight: var(--noora-font-weight-semibold);
+}
+
+.slidev-layout em {
+  color: var(--noora-surface-label-secondary);
+}
+
+.slidev-layout a {
+  color: var(--slidev-theme-primary);
+  text-decoration-thickness: var(--noora-spacing-1);
+  text-underline-offset: var(--noora-spacing-2);
+}
+
+.slidev-layout :not(pre) > code {
+  display: inline-flex;
+  align-items: center;
+  border-radius: var(--noora-radius-small);
+  background: var(--noora-surface-background-tertiary);
+  padding: 0 var(--noora-spacing-2);
+  color: var(--noora-surface-label-primary);
+  font: var(--noora-font-weight-medium) var(--noora-font-code-medium);
+}
+
+.slidev-layout pre,
+.slidev-layout .shiki {
+  box-shadow: var(--noora-border-light-default);
+  border-radius: var(--noora-radius-xlarge) !important;
+  background: var(--noora-surface-background-primary) !important;
+  padding: var(--noora-spacing-6) !important;
+}
+
+.slidev-layout ul,
+.slidev-layout ol {
+  margin-top: var(--noora-spacing-6);
+  padding-left: var(--noora-spacing-8);
+}
+
+.slidev-layout ul {
+  list-style: disc;
+}
+
+.slidev-layout ol {
+  list-style: decimal;
+}
+
+.slidev-layout li + li {
+  margin-top: var(--noora-spacing-4);
+}
+
+.slidev-layout li::marker {
+  color: var(--noora-surface-label-secondary);
+}
+
+.slidev-layout ul + p,
+.slidev-layout ol + p,
+.slidev-layout blockquote + p,
+.slidev-layout blockquote + ul,
+.slidev-layout blockquote + ol,
+.slidev-layout ul + blockquote,
+.slidev-layout ol + blockquote {
+  margin-top: var(--noora-spacing-8);
+}
+
+.slidev-layout blockquote {
+  box-shadow: var(--noora-border-light-default);
+  border-radius: var(--noora-radius-xlarge);
+  background: var(--noora-surface-background-tertiary);
+  padding: var(--noora-spacing-8);
+  color: var(--noora-surface-label-primary);
+  font: var(--noora-font-weight-medium) var(--noora-font-heading-large);
+}
+
+.slidev-layout blockquote p + p {
+  margin-top: var(--noora-spacing-3);
+  color: var(--noora-surface-label-secondary);
+  font: var(--noora-font-weight-regular) var(--noora-font-body-medium);
+}
+
+.slidev-layout blockquote.talk-pizza-callout {
+  box-shadow: var(--noora-border-light-default);
+  border-inline-start: var(--noora-spacing-1) solid
+    var(--noora-badge-light-fill-warning-label);
+  background: var(--noora-badge-light-fill-warning-background);
+  padding: var(--noora-spacing-7);
+  font: var(--noora-font-weight-medium) var(--noora-font-heading-medium);
+}
+
+.slidev-layout blockquote.talk-pizza-callout p {
+  color: var(--noora-surface-label-primary);
+  font: var(--noora-font-weight-medium) var(--noora-font-body-large);
+}
+
+.slidev-layout blockquote.talk-pizza-callout p + p {
+  margin-top: var(--noora-spacing-4);
+  color: var(--noora-surface-label-secondary);
+  font: var(--noora-font-weight-regular) var(--noora-font-body-large);
+}
+
+.slidev-layout table {
+  border-collapse: separate;
+  border-spacing: 0;
+  margin-top: var(--noora-spacing-7);
+  overflow: hidden;
+  width: 100%;
+}
+
+.slidev-layout thead th {
+  box-shadow: var(--noora-border-light-default);
+  background: var(--noora-surface-background-tertiary);
+  padding: var(--noora-spacing-4) var(--noora-spacing-5);
+  color: var(--noora-surface-label-primary);
+  font: var(--noora-font-weight-medium) var(--noora-font-body-medium);
+  text-align: left;
+}
+
+.slidev-layout tbody td {
+  box-shadow: var(--noora-border-light-default);
+  background: var(--noora-surface-background-primary);
+  padding: var(--noora-spacing-4) var(--noora-spacing-5);
+  color: var(--noora-surface-label-secondary);
+  font: var(--noora-font-weight-regular) var(--noora-font-body-medium);
+}
+
+.slidev-layout tbody tr td:first-child {
+  color: var(--noora-surface-label-primary);
+  font-weight: var(--noora-font-weight-medium);
+}
+
+.slidev-layout.section {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.slidev-layout.section h1 {
+  max-inline-size: 14ch;
+  font: var(--noora-font-weight-medium) var(--noora-font-display-small);
+}
+
+.slidev-layout.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.talk-banner,
+.talk-outro {
+  display: flex;
+  flex-direction: column;
+  gap: var(--noora-spacing-8);
+  box-shadow: var(--noora-border-section);
+  border-radius: var(--noora-radius-2xlarge);
+  background: var(--noora-surface-background-primary);
+  padding: var(--noora-spacing-10);
+}
+
+.talk-banner__eyebrow,
+.talk-banner__footer,
+.talk-outro__eyebrow,
+.talk-outro__actions,
+.talk-inline-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--noora-spacing-3);
+}
+
+.talk-banner h1,
+.talk-outro h1 {
+  max-inline-size: 16ch;
+  color: var(--noora-surface-label-primary);
+  font: var(--noora-font-weight-medium) var(--noora-font-display-small);
+  letter-spacing: -0.05em;
+  text-wrap: balance;
+}
+
+.talk-banner__subtitle,
+.talk-outro__subtitle {
+  max-inline-size: 40ch;
+  color: var(--noora-surface-label-secondary);
+  font: var(--noora-font-weight-regular) var(--noora-font-body-large);
+}
+
+.talk-banner__footer,
+.talk-outro__actions {
+  margin-top: auto;
+}
+
+.talk-product-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--noora-spacing-3);
+  margin-top: var(--noora-spacing-6);
+  box-shadow: var(--noora-border-light-default);
+  border-radius: var(--noora-radius-medium);
+  background: var(--noora-surface-background-primary);
+  padding: var(--noora-spacing-3) var(--noora-spacing-4);
+}
+
+.talk-product-link img {
+  width: var(--noora-spacing-7);
+  height: var(--noora-spacing-7);
+  color: var(--slidev-theme-primary);
+  flex-shrink: 0;
+}
+
+.talk-product-link a {
+  color: var(--noora-surface-label-primary);
+  font: var(--noora-font-weight-medium) var(--noora-font-body-medium);
+  text-decoration: none;
+}
+
+.talk-contrast {
+  display: flex;
+  flex-direction: column;
+  gap: var(--noora-spacing-7);
+  margin-top: var(--noora-spacing-7);
+}
+
+.talk-contrast__cards {
+  display: grid;
+  gap: var(--noora-spacing-5);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.talk-contrast__cards .noora-card__section {
+  gap: var(--noora-spacing-3);
+}
+
+.talk-contrast__label {
+  color: var(--noora-surface-label-secondary);
+  font: var(--noora-font-weight-medium) var(--noora-font-body-small);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.talk-contrast__summary {
+  color: var(--noora-surface-label-secondary);
+}
+
+.talk-contrast__thesis {
+  color: var(--noora-surface-label-primary);
+  font: var(--noora-font-weight-medium) var(--noora-font-heading-medium);
+}
+
+.talk-signal-list {
+  margin-top: var(--noora-spacing-6);
+  padding-left: 0 !important;
+  list-style: none !important;
+}
+
+.talk-signal-list li {
+  margin-top: 0;
+  padding-left: 0;
+}
+
+.talk-checklist {
+  margin-top: var(--noora-spacing-7);
+}
+
+.talk-checklist .noora-card__section {
+  gap: var(--noora-spacing-6);
+}
+
+.talk-checklist ol {
+  list-style: none;
+  padding-left: 0;
+  counter-reset: talk-checklist-list;
+}
+
+.talk-checklist ol li {
+  position: relative;
+  margin-top: 0;
+  counter-increment: talk-checklist-list;
+  box-shadow: var(--noora-border-light-default);
+  border-radius: var(--noora-radius-large);
+  background: var(--noora-surface-background-primary);
+  padding: var(--noora-spacing-4) var(--noora-spacing-5) var(--noora-spacing-4)
+    var(--noora-spacing-10);
+}
+
+.talk-checklist ol li::before {
+  position: absolute;
+  top: 0.625em;
+  left: var(--noora-spacing-4);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: var(--noora-spacing-8);
+  height: var(--noora-spacing-8);
+  border-radius: var(--noora-radius-max);
+  transform: translateY(-50%);
+  background: var(--noora-badge-light-fill-primary-background);
+  color: var(--noora-badge-light-fill-primary-label);
+  font: var(--noora-font-weight-medium) var(--noora-font-body-small);
+  content: counter(talk-checklist-list);
+}
+
+.talk-checklist__summary {
+  color: var(--noora-surface-label-primary);
+  font: var(--noora-font-weight-medium) var(--noora-font-heading-medium);
+}
+
+@media (max-width: 900px) {
+  .talk-contrast__cards {
+    grid-template-columns: 1fr;
+  }
+}

@@ -5,17 +5,24 @@ info: |
   A talk about turning Tuist from an open-source project into a business.
   Deep Dish Swift 2026
 author: Pedro Piñera Buendía
-keywords: tuist,open-source,business,swift
+keywords: tuist,open-source,business,swift,indie
 ---
 
-# From Generating Projects to Generating Revenue
-
-Pedro Piñera Buendía
-
-Deep Dish Swift 2026
+<div class="talk-banner">
+  <div class="talk-banner__eyebrow">
+    <span class="noora-badge" data-size="large" data-style="light-fill" data-color="primary">Deep Dish Swift 2026</span>
+    <span class="noora-badge" data-size="large" data-style="light-fill" data-color="secondary">Swift</span>
+  </div>
+  <h1>From Generating Projects to Generating Revenue</h1>
+  <p class="talk-banner__subtitle">How a painful Xcode tool became sustainable work, one layer at a time.</p>
+  <div class="talk-banner__footer">
+    <span class="noora-tag"><span data-part="label">Pedro Piñera Buendía</span></span>
+    <span class="noora-tag"><span data-part="label">@pepicrft</span></span>
+  </div>
+</div>
 
 <!--
-Welcome everyone. This talk is about a journey that started with a side project and turned into a business. If you've ever built something in your free time and wondered "could this be more?", this talk is for you.
+This talk is for Swift developers who have built something on nights and weekends and wondered whether it could become more than a hobby.
 -->
 
 ---
@@ -27,31 +34,62 @@ Welcome everyone. This talk is about a journey that started with a side project 
 - Now full-time founder
 
 <!--
-Quick intro. I've been an iOS/Swift developer for years, worked at various companies, and on the side I was building Tuist.
+Quick intro. I've spent most of my career as a Swift developer. Tuist started as a tool I needed, not as a startup idea.
 -->
 
 ---
 
 # What is Tuist?
 
-A platform that helps teams **scale their developer productivity** (Xcode and Gradle, for now).
+A platform that helps teams **scale developer productivity**.
 
-- Build caching, selective testing, and insights
-- Started with Xcode project generation, grew into much more
-- Used by teams at scale worldwide
+<div class="talk-product-link">
+  <img src="/brand-tuist.svg" alt="Tuist logo" />
+  <a href="https://tuist.dev">tuist.dev</a>
+</div>
+
+- Started with Xcode project generation
+- Expanded into caching, selective testing, and insights
+- Built for teams whose build systems get slower as they grow
 
 <!--
-For those who don't know Tuist: it started as an Xcode project generation tool, but today it's a developer productivity platform. We support Xcode and Gradle, with features like build caching, selective testing, and build insights. The journey from "a tool that generates xcodeproj files" to "a platform that helps teams ship faster" is a big part of this talk.
+For anyone who does not know Tuist, this is the short version. The important part for this talk is not the product surface area. It's the path from painful tool to sustainable business.
+-->
+
+---
+
+# Why this story might matter to you
+
+- 2017: weekend fix for `.pbxproj` pain
+- 2023: went full-time on Tuist
+- 2026: still a small team, now with paying customers
+- You likely have a side project quietly baking already
+
+<!--
+I'm not here to say everyone should build a venture-backed company. I'm here to show that a painful developer problem can turn into something sustainable.
+-->
+
+---
+
+# What "indie" means in this talk
+
+- Not "must stay solo forever"
+- Means **small, intentional, and close to customers**
+- Can look like a paid app, niche SaaS, OSS business, or productized consulting
+- The goal: buy back your time with something you own
+
+<!--
+I want to widen the definition. Indie is not an aesthetic. It's a way of building with tight feedback loops and fewer layers between you and the customer.
 -->
 
 ---
 layout: section
 ---
 
-# 1. You already have something valuable
+# 1. Start with a painful problem
 
 <!--
-Let's start with something I want you to internalize. If you have a side project that solves a real problem, you already have something valuable. You might not see it yet.
+Most good indie projects do not start with market research. They start with irritation.
 -->
 
 ---
@@ -59,460 +97,545 @@ Let's start with something I want you to internalize. If you have a side project
 # It started as a side project
 
 - 2017: Frustrated with Xcode project conflicts at work
-- XcodeGen emerged around the same time (I built `tuist/XcodeProj` to enable it)
-- But I wanted Swift manifests with compile-time safety
-- Project generation as a way to **conceptually compress** Xcode intricacies
-- The goal: make managing Xcode projects a joy
+- XcodeGen emerged around the same time
+- I wanted Swift manifests with compile-time safety
+- Project generation became a way to **compress Xcode complexity**
 - Shared it. People started using it.
 
 **Sound familiar?**
 
-Most of you have side projects. Some of you have users.
+Most of you have solved a problem like this at least once.
 
 <!--
-Tuist started the way a lot of your projects start. I had a problem at work, I built a thing on the weekend, I put it on GitHub, and people showed up. I didn't think of it as a business. It was a tool I needed.
+This was not visionary. It was practical. I had pain, I built a fix, and other people had the same pain.
 -->
 
 ---
 
-# Why did people show up?
+# Boring problems are underrated
 
 > Do the **uninteresting, hard things** that nobody else wants to do.
-> -- Peter Steinberger (OpenClaw)
+> -- Peter Steinberger
 
-Xcode project management is not glamorous. Nobody wakes up excited about `.pbxproj` files.
+Nobody wakes up excited about `.pbxproj` files.
 
-But every team at scale suffers from them. I didn't know it at the time, but **that's what business people call a market.**
+But painful, repeated, boring problems are often where the money is.
 
 <!--
-So why did people show up? There's an insight from Peter Steinberger, the creator of OpenClaw, that I think about a lot. He said on the Pragmatic Podcast: do the uninteresting hard things that nobody else wants to do. Xcode project management is exactly that. It's boring, painful, and nobody wants to deal with it. But that's precisely what makes it a good place to build. If nobody wants to do it, and everyone needs it done, you have something that business people call a market. I didn't know that word at the time. I just knew people had a problem and I had a solution.
+That quote has stayed with me for years. Glamorous ideas attract attention. Uninteresting hard problems attract grateful users.
+-->
+
+---
+
+# The best ideas usually start like this
+
+- A frustration you keep hitting at work
+- A workaround you repeat every week
+- A thing your team complains about in Slack
+- A tool you made "just for yourself" that others keep asking for
+
+That is often the first signal of an indie opportunity.
+
+<!--
+The early question is not "is this a billion-dollar business?" It's "does this pain happen often enough that people want relief?"
 -->
 
 ---
 layout: section
 ---
 
-# 2. The moment it got real
+# 2. Knowing when it's more than a hobby
 
 <!--
-For years Tuist was a side project. I maintained it in my free time. And then something happened that changed everything.
+The transition from side project to business rarely happens in one dramatic moment. It usually looks like accumulating signals.
 -->
 
 ---
 
 # The hidden cost of "free" software
 
-They say software has a **near-zero marginal cost**. One copy serves millions.
+Software is cheap to copy.
 
-But there's another cost nobody talks about:
+It is **not** cheap to maintain.
 
-- Supporting users with unique setups
-- Keeping up with every new Xcode version
+- Supporting weird setups
+- Keeping up with every new Xcode release
 - Reviewing PRs, triaging issues, adding features
+- Carrying the emotional load when other teams depend on your weekends
 
-You balance this with your full-time job, your family, your energy.
+<blockquote class="talk-pizza-callout">
+  <p>🍕 Offering a slice is easy.</p>
+  <p>Running the kitchen every night is the expensive part.</p>
+</blockquote>
 
 <!--
-People say software has near-zero marginal cost. And that's true for distribution. But there's a cost nobody talks about: the maintenance cost. Supporting users, keeping up with Xcode updates, reviewing pull requests, fixing edge cases. You balance all of that with your day job and your personal life. And for a while, it works. You find the energy.
+Distribution is almost free. Maintenance is not. That's the cost open source maintainers feel first.
 -->
 
 ---
 
-# Some projects can be "done." Tuist couldn't.
+# Signals this might be a business
 
-Some side projects reach a point where you call them **complete**. That's fine.
+<ul class="talk-signal-list">
+  <li>🧱 Users depend on it for real work</li>
+  <li>🔒 Companies ask for reliability, security, or support</li>
+  <li>🤝 Contributors show up without you recruiting them</li>
+  <li>🪝 The roadmap gets pulled by demand, not pushed by your curiosity</li>
+  <li>💳 You hear some version of: "Can my company pay for this?"</li>
+</ul>
 
-Tuist was different. It kept growing. It kept demanding more.
-
-Other maintainers in similar positions **burn out and walk away**.
-
-We knew it wasn't sustainable, but making the leap felt too risky with a full-time job.
+When the work stops being random and starts being predictable, pay attention.
 
 <!--
-Some open source projects reach a natural stopping point and the maintainer can say "it's done." That wasn't the case for Tuist. The more people used it, the more they needed from it. We've all seen other projects where maintainers explicitly say "I'm burned out, I'm stepping away." We were heading in that direction. We felt we had to do something about it, but we didn't have the push to actually make a decision.
+This is the slide I wish I'd seen earlier. These are the signals I would watch for in any side project today.
 -->
 
 ---
-
-# 2023: The push we needed
-
-- Got laid off from Shopify during the tech downturn
-- Tuist had real traction: contributors, users, companies depending on it
-- For the first time, I had the space to make the call
-- Pinged Marek, another core contributor still at Shopify. We knew each other from years of open source collaboration. We decided to build a company together.
-
-**The signal:** when your project needs more than you can give for free, that's not a burden. That's an opportunity.
-
-<!--
-Then in 2023, I was laid off from Shopify, like many of you may have experienced during that wave. And suddenly I had something I never had before: the space to make a decision. So I pinged Marek, another core contributor who was still at Shopify at the time. We'd been collaborating on Tuist for years through open source, so we already knew how to work together. It felt like the right thing to throw ourselves into this journey together. We decided to build a company.
--->
-
----
-
-# Something it took me a while to realize
 
 # It's not a harder job. It's a different job.
 
-As an engineer, you solve **technical problems**.
-
-As a founder, you solve **people, market, and money problems**.
-
-Different skills. Different anxieties. But not harder.
+<div class="talk-contrast">
+  <div class="talk-contrast__cards">
+    <div class="noora-card__section">
+      <p class="talk-contrast__label">🛠️ Engineer</p>
+      <p>You solve <strong>technical problems</strong>.</p>
+    </div>
+    <div class="noora-card__section">
+      <p class="talk-contrast__label">🧭 Founder</p>
+      <p>You solve <strong>people, market, and money problems</strong>.</p>
+    </div>
+  </div>
+  <p class="talk-contrast__summary">Different skills. Different anxieties. Same underlying craft:</p>
+  <p class="talk-contrast__thesis">Find the constraint, reduce the uncertainty, keep moving.</p>
+</div>
 
 <!--
-This is something it took me a while to realize. When you make the jump, you expect it to be harder. And some days it is. But mostly it's just different. Instead of debugging a compiler issue, you're debugging why a customer churned. Instead of writing tests, you're writing proposals. The anxiety is different, but the craft is the same: you're solving problems. Once I internalized that, it became a lot less scary.
+This mindset shift matters. If you frame "business" as magic, you'll avoid it. If you frame it as a new problem space, you can learn it.
 -->
 
 ---
 
-# Raising capital
+# How we bought ourselves time
 
-- Germany was unofficially our first investor (unemployment benefits)
-- But B2B large contracts take a **long time to close**
-- We saw traction, but needed to **buy time** to build the momentum
-- So we threw ourselves into raising capital
+There is no single "correct" bridge to full-time:
 
-<!--
-I want to be honest about this because people can be defensive about raising capital. Germany was unofficially our first investor, through unemployment benefits. That bought us some time. But we quickly realized that B2B sales with large enterprises take a long time to close. Months, sometimes. We had traction, the signals were there, but we needed to buy time to build the momentum. So we threw ourselves into raising capital.
--->
+- Savings
+- Consulting
+- Early customers
+- Grants or unemployment benefits
+- Investors
 
----
+We chose capital because enterprise sales cycles are slow.
 
-# What I learned about raising
-
-- **Storytelling matters**. You can have something with no potential but a great story, and it works.
-- Investors like **known and large markets**. They are driven by FOMO too.
-- They want you to **die fast or grow fast**. Exits are failures to them -- they want you to go public.
-- So it's possible you end up **playing a new game** you didn't sign up for.
-
-We were honest: we wouldn't raise again if we don't see the value. We want Tuist to reach new corners, but **grow organically**, not artificially -- because that would compromise the product and our users.
+The lesson is simpler: pick financing that matches your reality, not your ego.
 
 <!--
-Here's what I learned. Storytelling is everything in fundraising. You can have something with limited potential, but if the story is great, it works. Investors like known and large markets, and they're driven by FOMO just like everyone else. They want you to either die fast or grow fast. Exits are actually failures in their eyes -- they want you to go public. So you might end up playing a game you didn't sign up for. We were very honest with our investors: we wouldn't raise more unless we see real value in it. We want Tuist to reach new corners, but we'd rather grow organically than be forced to grow artificially. Because artificial growth compromises the product and the trust of our users and customers.
--->
-
----
-layout: section
----
-
-# 3. Understanding what you've actually built
-
-<!--
-Once I decided to go all in, I had to answer a question that sounds simple but isn't: what is my project actually worth? And how do I capture any of that worth?
--->
-
----
-
-# Value created vs. value captured
-
-Think of a restaurant:
-
-- **Value created:** the meal, the experience, the atmosphere
-- **Value captured:** the bill you pay
-
-The ratio is healthy. You pay a fair share of the value you receive.
-
-<!--
-There's a concept from business that I find really useful. Every product creates value and captures value. A restaurant creates value through food and experience, and captures it through the bill. The ratio between those two is usually pretty healthy.
--->
-
----
-
-# In open source, the ratio is broken
-
-As [Penpot's team](https://penpot.app) brilliantly illustrated:
-
-**Value captured / Value created ≈ 0.1%**
-
-- Digital software operates at scale (one copy serves millions)
-- Adoption is bottom-up (developers choose, companies benefit)
-- Nobody gets a bill
-
-<!--
-In open source, this ratio is completely broken. Penpot's team showed this brilliantly: the value captured by open source projects is roughly 0.1% of the value they create. Your tool saves companies millions in developer time, and you get... GitHub stars. Maybe a sponsorship for 5 dollars a month. This is the fundamental problem.
--->
-
----
-
-# Why is the ratio so broken?
-
-Unlike a restaurant meal, software is **intangible**. It's hard to feel the value.
-
-- Proprietary software captures ~10% of the value it creates
-- Subscription models sneak past that (1%/month adds up)
-- Open source? You're building on top of free, giving away free, and hoping a **tiny fraction** of users will pay for something extra
-
-The result: people say "it's just a script", "we could build this ourselves", "why pay for something that's free?"
-
-But your **expertise**, your **community trust**, and your **brand** are real assets -- and they're harder to replicate than code.
-
-*Inspired by [Penpot's talk on open source business models](https://www.youtube.com/watch?v=STNomD9GUJY)*
-
-<!--
-The Penpot team explained this brilliantly. In a restaurant, you can feel the value: the meal, the atmosphere, the service. With software, it's intangible. Proprietary software has solved this by capturing around 10% of the value it creates. Subscriptions sneak past that by charging 1% per month, which adds up. But in open source, you're giving everything away and hoping a tiny fraction of users will pay for something extra. That gets you to about 0.1%. People say "it's just a script" or "we could build this ourselves." But what they can't replicate is the years of edge cases, the community trust, the expertise. Those are your real assets.
+I wanted to keep this section because people are curious about funding, but the important point is optionality. There are many ways to create runway.
 -->
 
 ---
 layout: section
 ---
 
-# 4. Choosing a model that fits you
+# 3. Put a price on the pain
 
 <!--
-So you know you have something valuable and the ratio is broken. Now the question is: how do you capture some of that value without destroying what makes your project great?
+Developers often underprice their work because they think in implementation effort instead of business value.
 -->
 
 ---
 
-# Open source business models
+# Usage is not the same as revenue
 
-| Model | How it works | Risk |
-|-------|-------------|------|
-| **Donations** | Users contribute voluntarily | Unreliable, doesn't scale |
-| **Support/Consulting** | Sell your time | Doesn't scale, burns you out |
-| **Courses/Education** | Package your expertise | Scales better, but you're selling knowledge, not product |
-| **Open Core** | Free core + paid premium features | Community resentment, feature gating |
-| **SaaS / Managed** | Host it for them | Infra costs, AWS can clone you |
-| **"Tax the controller"** | Charge for governance, not features | Requires enterprise market |
+Developer products often have a strange shape:
+
+- One developer adopts the tool
+- A whole team gets the benefit
+- Sometimes the budget owner is not the adopter
+- You still carry the maintenance burden
+
+Usage is proof of relevance, not a business model.
+
+<blockquote class="talk-pizza-callout">
+  <p>🍕 Enjoying a slice is not the same as funding the restaurant.</p>
+</blockquote>
 
 <!--
-There are many models. Donations are nice but won't pay rent. Support and consulting sells your time, not your product. Open core is common but creates tension about what's free and what's not. SaaS works but you're competing with AWS. And then there's what Penpot calls "tax the controller", where the product stays fully open but you charge for enterprise governance.
+This is the value-capture problem in more concrete terms. Adoption can compound faster than revenue unless you design for capture.
+-->
+
+---
+
+# Developer math, not startup math
+
+If a tool saves:
+
+- 15 minutes per developer per day
+- for a team of 20
+- across ~220 workdays
+
+That is **1,100 hours per year**.
+
+Now multiply by loaded engineering cost.
+
+That is what companies are actually budgeting against.
+
+<!--
+This framing tends to land better with technical audiences than abstract business language. You're not selling software. You're selling recovered time and reduced friction.
+-->
+
+---
+
+# What companies actually pay for
+
+- Reliability on weird setups
+- Fast updates when Apple changes something
+- Better onboarding and fewer tribal workflows
+- Security reviews, SLAs, and accountability
+
+The code matters.
+
+But the **risk reduction** often matters more.
+
+<!--
+This was an important realization for us. Many customers are not paying for features alone. They're paying for certainty.
+-->
+
+---
+layout: section
+---
+
+# 4. Pick a model you can live with
+
+<!--
+This is where many developers get stuck. They think there is one "real" business model. There isn't.
+-->
+
+---
+
+# Indie business models for developers
+
+| Model | Good when | Trap |
+|-------|-----------|------|
+| **Paid app / subscription** | You solve an end-user problem | High churn pressure |
+| **Consulting / productized service** | You already have demand and trust | You can become the bottleneck |
+| **Courses / education** | Your expertise is teachable | You may build an audience business, not a product |
+| **Open core** | Free adoption feeds paid upgrades | Feature-gating can create resentment |
+| **Hosted / managed OSS** | Running it well is hard and valuable | Infra and support become the product |
+
+<!--
+The right model depends on what you want your day-to-day work to feel like.
 -->
 
 ---
 
 # What Tuist chose
 
-Long-term, we align with **open core / "tax the controller"**. But we need value capturing in the **infrastructure**, not the software.
+- Free for indies and small startups
+- Paid for large companies that need guarantees
+- Value capture moved toward **infrastructure and accountability**
+- The more value shifts to infra, the more client-side code we can open up
 
-- We sell B2B to **large enterprises** where scaling development slows productivity down
-- We built problems that need a server: **caching, insights**, and tackling **accidental complexity**
-- Companies pay us for running Tuist **fast, reliably, and securely**. The software is the least important piece.
-- Server uses a **source-available license** as a bridge -- as value shifts to infra, we open source more and more
+Indies pay us in a different currency too:
+
+<ul class="talk-signal-list">
+  <li>🐞 Bug reports</li>
+  <li>💡 Feature requests</li>
+  <li>🎤 Talks at conferences</li>
+  <li>📣 Word of mouth</li>
+  <li>🤝 Contributions</li>
+</ul>
 
 <!--
-We looked at all the models and realized we align most with open core or tax the controller. But to get there, we need to shift where we capture value from the software to the infrastructure. So we deliberately built features that need a server: caching, insights, and more recently tackling accidental complexity in build systems. Companies pay us not for the code, but for running it fast, reliably, and securely. We used a source-available license for the server as a bridge. As we shift value capturing to infrastructure, we keep releasing more pieces as open source.
+This is the model that fits us. It would be wrong for many products, which is exactly the point.
 -->
 
 ---
 
-# No free trials. Different currencies.
-
-- **Indies and small startups** use Tuist for free. Their currency: bug reports, feature requests, contributions.
-- **Large companies** are our customers. They need SLAs, security, and someone to be liable.
-
-<!--
-We deliberately avoided the free trial model. Indie developers and small startups use Tuist for free, and they pay in a different currency: bug reports, feature requests, contributions. They make the product better. Large companies are our paying customers. They need uptime guarantees, security, and someone to call when things break. Both groups are valuable, just in different ways.
--->
-
----
-
-# The right model depends on you
+# Pick the model that matches your constraints
 
 Find the intersection of:
 
-- **What you enjoy doing** -- you'll be doing it for years
-- **Who has the problem** -- your ICP (Ideal Customer Profile). Who suffers enough to pay?
-- **What value you can capture** -- what's the thing they can't easily replicate or do themselves?
+- **What you enjoy doing**
+- **Who feels the pain enough to pay**
+- **What they cannot easily reproduce themselves**
 
-If you're open source, add a guiding principle: **how do I capture value without compromising the openness?**
+If you're building in public or in open source, add one more:
+
+**How do I capture value without breaking trust?**
+
+Not every good business needs to become a franchise.
 
 <!--
-There's no universal answer. You need to find the intersection of three things. First, what you enjoy doing, because you'll be doing it for a long time. Second, who has the problem. In business terms, that's your ICP, your Ideal Customer Profile. Who suffers enough from this problem to actually pay for a solution? And third, what value can you capture? What's the thing they can't easily replicate or do themselves? And if you're building in open source, you add one more guiding principle on top: how do I capture that value without compromising the openness of the project?
+That last question matters a lot for developer audiences. Trust compounds slowly and is easy to destroy.
 -->
 
 ---
 
-# A great product is necessary, but not sufficient
+# This generalizes beyond devtools
 
-As developers, we tend to believe that **if we build something good, people will come**.
+- Building a Swift app? Charge for a recurring problem people want gone
+- Building a library or package? Adoption comes first; the money usually sits around it
+- Doing client work? Productize the repeated part
+- Running an OSS project? The paid layer is often hosting, guarantees, or team workflows
 
-That's not how it works. You also need to figure out:
-
-- **Marketing** -- how do people discover you?
-- **Go-to-market (GTM)** -- how do you reach your ICP?
-- **Sales** -- how do you close deals?
-- **Positioning** -- how do you explain what you do in 10 seconds?
-
-Building the product is the part you already know. Everything else is the part you have to learn.
+Different wrapper. Same underlying playbook.
 
 <!--
-This is something I wish someone had told me earlier. As developers, we have this belief that if you build something good enough, people will just show up. And sometimes they do at first, through open source and word of mouth. But turning that into a business requires a whole set of skills you've never practiced: marketing, go-to-market strategy, sales, positioning. Building the product is the part you already know. Everything else is the part you have to learn. And honestly, it's where most of the work is.
+I want app developers in the room to hear that this is not only a devtools talk. The form changes, the logic does not.
 -->
 
 ---
 layout: section
 ---
 
-# 5. Your users are developers (and that's weird)
+# 5. Developers do not want to be sold to
 
 <!--
-Here's something nobody warns you about when you build developer tools: selling to developers is a completely different game.
+If your users are developers, your go-to-market motion is weird in a very specific way.
 -->
 
 ---
 
 # Selling to developers is hard
 
-- ❌ Cold outreach? They'll mass-block you.
-- ❌ Flashy landing page? They'll view source.
-- ❌ "Schedule a demo"? They'll close the tab.
-- ✅ They **want to discover tools themselves**.
+- Cold outreach usually underperforms
+- Flashy marketing rarely beats credibility
+- "Book a demo" is a weak first touch
+- Developers want to **discover, verify, and trust** a tool on their own
 
-Developers are the worst customers... and the best marketers.
+They are difficult customers.
+
+They are also your best distribution channel.
+
+<blockquote class="talk-pizza-callout">
+  <p>🍕 Developer tools spread more like trusted restaurant recommendations than ad campaigns.</p>
+</blockquote>
 
 <!--
-Developers hate being sold to. Cold emails? Straight to spam. Sales calls? They'd rather debug a memory leak. "Book a demo" buttons? They'll literally build a worse version of your tool just to avoid clicking it. But here's the flip side: when a developer genuinely likes your tool, they'll evangelize it harder than any sales team could.
+Developers are skeptical, but in a healthy way. If they trust the tool, they will tell everyone.
 -->
 
 ---
 
 # Bottom-up adoption is your friend
 
-1. A developer on a team discovers your tool
-2. They try it, love it, introduce it to their team
-3. The team adopts it, it becomes critical
-4. Now the company needs support, SLAs, and **someone to be liable**
+1. One developer discovers your tool
+2. They try it and bring it to the team
+3. The team depends on it
+4. The company eventually needs support, SLAs, or accountability
 
-That's when the conversation about paying starts.
+That is often when money enters the conversation.
 
 <!--
-The sales motion for developer tools is bottom-up. One person finds it, introduces it to the team, the team depends on it, and eventually the company needs guarantees. That's when the conversation about paying starts. And here's the honest truth: companies often pay not because they love you, but because they need someone to be accountable. They pay so that when something breaks, it's your problem.
+This is how many developer products spread. You do not start with procurement. You earn your way there.
 -->
 
 ---
 
-# So how do you actually sell?
+# What actually created inbound for us
 
-- We tried **cold outreach**. It doesn't work.
-- What works is **inbound** -- but you have to lay the ground for it
-- For us that means **building and sharing in public**: blog posts, talks, open source activity
-- That's how you create the connection in developers' minds between **their pain** and **you solving it**
+- Shipping useful open source work consistently
+- Writing docs and migration guides
+- Speaking at conferences like this one
+- Publishing blog posts around painful transitions
+- Responding quickly when new Xcode releases broke people
 
-<!--
-We tried cold outreach early on. It doesn't work with developers. So we shifted to inbound, but inbound doesn't happen by itself. You have to lay the ground for it. For us, that means building in public and sharing in public. Blog posts, conference talks, being active in the open source community. Every piece of content is a seed. When a developer eventually hits the pain point that Tuist solves, you want them to already know your name. That's how you create the connection between their problem and your solution. It's slow, but it compounds.
--->
+Every artifact taught the market:
 
----
-layout: section
----
-
-# 6. You don't need to be big
+**"When this hurts, Tuist is one place to look."**
 
 <!--
-One of the biggest myths is that you need a big team to compete. That's less true today than it's ever been.
+This is the practical GTM slide. No magic funnel. Just repeated acts of usefulness that build recall.
 -->
 
 ---
 
-# AI as the great equalizer
+# A great product is necessary, not sufficient
 
-We're a tiny team. AI lets us:
+You still need to learn:
 
-- **Move fast across ecosystems** (added Gradle support in ~2 weeks)
-- **Multiply output** without multiplying headcount
-- **Jump into unfamiliar codebases** and be productive immediately
+- Positioning
+- Distribution
+- Sales
+- Pricing
 
-<!--
-AI has fundamentally changed what a small team can do. We added Gradle build system support in roughly two weeks. Two weeks! That would have been months before. Coding agents let us jump into ecosystems we've never worked in and be productive almost immediately. This is a superpower for small companies.
--->
+Building the product is familiar.
 
----
-
-# Big companies have the innovation dilemma
-
-Large companies struggle with:
-
-- Internal politics and slow decision-making
-- Legacy architecture they can't abandon
-- Culture that punishes risk-taking
-
-**You don't have those problems.** Your size is an advantage, not a limitation.
+Learning how people find it, trust it, and pay for it is the second half of the work.
 
 <!--
-Meanwhile, big companies are stuck. They have the innovation dilemma: they can't cannibalize their existing products, they move slowly because of internal politics, and their culture punishes risk. You, with your side project and a laptop, can iterate faster than a team of 50 at a big company. Software efficiency, as Andrew Kelley from the Zig project writes about, is about doing more with less. That's your edge.
+This is the part many engineers underestimate, including me.
 -->
 
 ---
 layout: section
 ---
 
-# 7. Protecting what you've built
+# 6. Small is a feature
 
 <!--
-Once you have something real, you need to think about protecting it. Not with lawyers necessarily, but with strategy.
+One of the best parts of staying small is that speed itself becomes part of the product.
 -->
 
 ---
 
-# Moats in open source
+# AI is leverage, not magic
 
-Your code is public. So what's your moat?
+For a small team, AI is useful for:
 
-- **Community and trust** (takes years to build, seconds to lose)
-- **Infrastructure** (hard to replicate, even if the code is open)
-- **Brand and reputation** (people buy from people they trust)
+- First drafts in unfamiliar ecosystems
+- Faster prototyping and refactoring
+- Support, documentation, and research
+- Stretching a tiny team across more surface area
 
-Our strategy: shift the moat to infra, so we can **open source even more** of the client-side code.
+It does **not** replace taste, trust, or customer understanding.
 
 <!--
-In open source, your code is public by definition. So what protects you? Three things: community trust, which takes years to build. Infrastructure, which is genuinely hard to replicate even with the source code. And brand. Our strategy is deliberate: we're moving our moat deeper into infrastructure so that we can actually open source more of the surface-level code. The more we open source, the more trust we build. The more trust we build, the stronger the moat.
+I wanted to keep the AI point, but make it more grounded. The leverage is real. The replacement story is not.
 -->
 
 ---
 
-# Your brand and how others see you
+# Your size is an advantage
 
-**Brand** is your hardest asset to build. In open source, it takes years: trust, community, word of mouth. Traditional companies throw money at it -- and when they see yours, they see a shortcut. It's the same playbook as influencer marketing: they offer peanuts for access to your reputation. **Know your worth.**
+Small teams can:
 
-How other companies see you evolves:
+- Ship without committees
+- Change direction quickly
+- Stay close to customers
+- Go deep on narrow, weird problems
 
-1. **"Who are you?"** -- You're invisible.
-2. **"Let's collaborate!"** -- They want your brand.
-3. **"We're building that too."** -- You validated the market.
-4. **"No comment."** -- You're a real threat.
+Big companies are better at distribution.
 
-If you get to stage 4, you're doing something right.
+They are usually worse at focus.
+
+<!--
+If you're indie, you should not try to look big. You should exploit the advantages of being small.
+-->
 
 ---
 
-# You don't need to chase hot markets
+# You do not need a hot market
 
-- Heavily invested companies have **incentives to align** with where capital already flows
-- Capital goes to **hot markets**, not necessarily new ones
-- They constantly need to **increase captured value** or **expand into new markets** -- that's when they jump into new domains and become confusing to their own users
-- Without that pressure, you can **innovate and untap new opportunities**
+- Capital chases obvious categories
+- Developers often find value in neglected corners
+- A small painful niche can be enough
+- Depth beats breadth when trust matters
 
-It feels uncomfortable. It seems like you're rowing against the trend. But you can find your cozy market and **make it yours**.
+For us, that meant going deeper into build systems instead of wider into adjacent markets.
 
-For us, that market is **plugging into every toolchain and helping it scale**. It's not attractive because it requires going deep into each build system. Other companies maximize the markets they can reach with a single solution. We go deep instead of wide.
+<blockquote class="talk-pizza-callout">
+  <p>🍕 You do not need to feed the whole city.</p>
+  <p>You need the right table to come back again and again.</p>
+</blockquote>
 
 <!--
-Here's the thing about big companies and venture-backed startups: they have incentives to go where the money already is. Capital flows to hot markets, not to new ones. If you don't have that pressure, you can actually innovate in spaces nobody is paying attention to. It feels uncomfortable at first. You look around and nobody else is doing what you're doing, and you wonder if you're wrong. But that discomfort is actually a signal. You can find a market that's small enough that nobody else cares, but real enough that people will pay. And you can make it yours.
+This is encouraging for indie builders because it means you do not need to win the trend cycle to win a real business.
 -->
 
 ---
 layout: section
 ---
 
-# 8. You can do this
+# 7. Protect what compounds
 
 <!--
-Let me wrap up with something I genuinely believe.
+When your code is public or your audience is technical, your durable assets tend to live outside the repository.
 -->
 
 ---
 
-# What I've learned
+# Assets small teams can compound
 
-- Your side project might be more valuable than you think
-- The jump from engineer to founder is **different**, not harder
-- You don't need permission, capital, or a big team to start
-- AI has made small teams more powerful than ever
-- Pick a model that lets you keep loving the work
+- Community trust
+- Word of mouth
+- Reputation for solving a specific pain well
+- Infrastructure or workflow expertise
+- A clear point of view
+
+Code is important.
+
+But these assets are usually harder to copy.
 
 <!--
-If there's one thing I want you to take away, it's this: the barrier to doing this is lower than you think. You don't need venture capital. You don't need an MBA. You don't need a team of 20. You need a real problem, users who care, and the willingness to treat it as a different kind of engineering challenge.
+This is the softer version of the moat argument. It lands better for technical audiences because it feels earned, not defensive.
+-->
+
+---
+
+# Brand is not vanity
+
+In developer products, brand means:
+
+- People know your name when the pain appears
+- They assume you understand the edge cases
+- They trust that you will still be around when it matters
+
+That trust takes years to build.
+
+<blockquote class="talk-pizza-callout">
+  <p>🍕 It's what makes someone say: "If we're in Chicago, that's the place."</p>
+</blockquote>
+
+Do not trade it away cheaply.
+
+<!--
+Brand in this context is not logos and gradients. It is accumulated trust.
+-->
+
+---
+layout: section
+---
+
+# 8. If you're considering indie
+
+<!--
+I want to end on actions, not inspiration alone.
+-->
+
+---
+
+# My advice, condensed
+
+- Start with a pain you understand deeply
+- Look for signals before writing a grand plan
+- Charge earlier than feels comfortable
+- Pick a model that fits your life, not someone else's timeline
+- Use AI for leverage, not validation
+
+<!--
+This is the summary I want people to remember.
+-->
+
+---
+
+# Monday morning checklist
+
+<div class="noora-card talk-checklist">
+  <div class="noora-card__section">
+    <div class="talk-inline-tags">
+      <span class="noora-badge" data-size="large" data-style="light-fill" data-color="primary">Monday morning</span>
+      <span class="noora-badge" data-size="large" data-style="light-fill" data-color="information">Actionable</span>
+    </div>
+<ol>
+  <li>List three recurring pains you know firsthand</li>
+  <li>Pick the one that happens often and expensively</li>
+  <li>Talk to five people who have it</li>
+  <li>Build the smallest thing that removes real pain</li>
+  <li>Ask for money before polishing the brand story</li>
+</ol>
+<div class="noora-line-divider">
+  <span data-part="line"></span>
+  <span data-part="text">The punchline</span>
+  <span data-part="line"></span>
+</div>
+<p class="talk-checklist__summary">You do not need permission. You need evidence.</p>
+  </div>
+</div>
+
+<!--
+If someone leaves with one actionable slide, I want it to be this one.
 -->
 
 ---
@@ -520,14 +643,23 @@ layout: center
 class: text-center
 ---
 
-# From generating projects to generating revenue
-
-The path from side project to business is closer than you think.
-
-**Thank you.**
-
-@pepicrft
+<div class="talk-outro">
+  <div class="talk-outro__eyebrow">
+    <span class="noora-badge" data-size="large" data-style="light-fill" data-color="primary">Thank you</span>
+    <span class="noora-badge" data-size="large" data-style="light-fill" data-color="secondary">Deep Dish Swift</span>
+  </div>
+  <h1>From generating projects to generating revenue</h1>
+  <p class="talk-outro__subtitle">The path from side project to sustainable work is shorter than it looks.</p>
+  <div class="talk-outro__actions">
+    <a class="noora-button" data-size="large" data-variant="primary" href="https://tuist.dev">
+      <span>tuist.dev</span>
+    </a>
+    <a class="noora-button" data-size="large" data-variant="secondary" href="https://x.com/pepicrft">
+      <span>@pepicrft</span>
+    </a>
+  </div>
+</div>
 
 <!--
-Thank you all. I'm happy to chat after the talk if any of you are thinking about making the jump. You can find me at pepicrft on most platforms.
+Happy to chat after the talk if you're building something small, weird, and useful.
 -->
