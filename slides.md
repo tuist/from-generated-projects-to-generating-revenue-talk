@@ -31,7 +31,7 @@ This talk is for Swift developers who have built something on nights and weekend
 
 - Building Tuist since 2017
 - Previously at SoundCloud, Shopify, and other companies
-- Now full-time founder
+- Now full-time CEO and co-founder of Tuist
 
 <!--
 Quick intro. I've spent most of my career as a Swift developer. Tuist started as a tool I needed, not as a startup idea.
@@ -39,9 +39,11 @@ Quick intro. I've spent most of my career as a Swift developer. Tuist started as
 
 ---
 
+<div style="max-width: 55%;">
+
 # What is Tuist?
 
-A platform that helps teams **scale developer productivity**.
+<span style="color: var(--noora-font-color-primary)">A <strong>platform team as a service</strong>.</span>
 
 <div class="talk-product-link">
   <img src="/brand-tuist.svg" alt="Tuist logo" />
@@ -50,13 +52,21 @@ A platform that helps teams **scale developer productivity**.
 
 - Started with Xcode project generation
 - Expanded into caching, selective testing, and insights
-- Built for teams whose build systems get slower as they grow
+- Becoming more relevant as agentic coding accelerates and build & test setups struggle to keep up
+
+</div>
+
+<img src="/what-is-tuist.png" class="slide-right-img" />
 
 <!--
 For anyone who does not know Tuist, this is the short version. The important part for this talk is not the product surface area. It's the path from painful tool to sustainable business.
 -->
 
 ---
+class: slide-with-bg
+---
+
+<img src="/why-this-story.png" class="slide-bg-img" />
 
 # Why this story might matter to you
 
@@ -83,8 +93,28 @@ I want to widen the definition. Indie is not an aesthetic. It's a way of buildin
 -->
 
 ---
-layout: section
+
+# What we'll cover
+
+1. **Start with a painful problem**
+2. **Knowing when it's more than a hobby**
+3. **Find what software companies would pay for**
+4. **Pick a model you can live with**
+5. **Selling to developers**
+6. **Small is a feature**
+7. **Protect what compounds**
+8. **Looking back, looking forward**
+
+<!--
+A roadmap for the talk. Each section mixes Tuist's experience with takeaways you can apply to your own projects.
+-->
+
 ---
+layout: section
+class: section-glow
+---
+
+<iframe src="/tuist-glow-shader.html" class="section-shader"></iframe>
 
 # 1. Start with a painful problem
 
@@ -106,6 +136,8 @@ Most good indie projects do not start with market research. They start with irri
 
 Most of you have solved a problem like this at least once.
 
+<img src="/it-started-as-a-side-project.png" class="slide-right-img" style="top: auto; bottom: 0; transform: none; height: 90%;" />
+
 <!--
 This was not visionary. It was practical. I had pain, I built a fix, and other people had the same pain.
 -->
@@ -120,6 +152,8 @@ This was not visionary. It was practical. I had pain, I built a fix, and other p
 Nobody wakes up excited about `.pbxproj` files.
 
 But painful, repeated, boring problems are often where the money is.
+
+<img src="/boring-problems.png" style="margin-top: var(--noora-spacing-6); max-height: 40%; width: auto; display: block; margin-inline: auto;" />
 
 <!--
 That quote has stayed with me for years. Glamorous ideas attract attention. Uninteresting hard problems attract grateful users.
@@ -142,7 +176,10 @@ The early question is not "is this a billion-dollar business?" It's "does this p
 
 ---
 layout: section
+class: section-glow
 ---
+
+<iframe src="/tuist-glow-shader.html" class="section-shader"></iframe>
 
 # 2. Knowing when it's more than a hobby
 
@@ -154,9 +191,7 @@ The transition from side project to business rarely happens in one dramatic mome
 
 # The hidden cost of "free" software
 
-Software is cheap to copy.
-
-It is **not** cheap to maintain.
+Software is cheap to copy. It is **not** cheap to maintain.
 
 - Supporting weird setups
 - Keeping up with every new Xcode release
@@ -168,8 +203,10 @@ It is **not** cheap to maintain.
   <p>Running the kitchen every night is the expensive part.</p>
 </blockquote>
 
+See also: [Why We Can't Have Nice Software](https://andrewkelley.me/post/why-we-cant-have-nice-software.html). Software wants to be *finished*, but sustaining it never is.
+
 <!--
-Distribution is almost free. Maintenance is not. That's the cost open source maintainers feel first.
+Distribution is almost free. Maintenance is not. That's the cost open source maintainers feel first. Andrew Kelley's post makes a related point: software naturally tends toward completion, but the work of maintaining it is perpetual.
 -->
 
 ---
@@ -181,10 +218,12 @@ Distribution is almost free. Maintenance is not. That's the cost open source mai
   <li>🔒 Companies ask for reliability, security, or support</li>
   <li>🤝 Contributors show up without you recruiting them</li>
   <li>🪝 The roadmap gets pulled by demand, not pushed by your curiosity</li>
+  <li style="color: var(--slidev-theme-primary); font-weight: var(--noora-font-weight-semibold);">⏳ The project consumes more time than you can give for free <img src="/brand-tuist.svg" style="display: inline; width: 1.2em; height: 1.2em; vertical-align: middle; margin-left: 0.3em; filter: invert(22%) sepia(85%) saturate(5000%) hue-rotate(252deg) brightness(92%) contrast(95%);" /></li>
   <li>💳 You hear some version of: "Can my company pay for this?"</li>
 </ul>
 
 When the work stops being random and starts being predictable, pay attention.
+
 
 <!--
 This is the slide I wish I'd seen earlier. These are the signals I would watch for in any side project today.
@@ -192,110 +231,138 @@ This is the slide I wish I'd seen earlier. These are the signals I would watch f
 
 ---
 
-# It's not a harder job. It's a different job.
-
-<div class="talk-contrast">
-  <div class="talk-contrast__cards">
-    <div class="noora-card__section">
-      <p class="talk-contrast__label">🛠️ Engineer</p>
-      <p>You solve <strong>technical problems</strong>.</p>
-    </div>
-    <div class="noora-card__section">
-      <p class="talk-contrast__label">🧭 Founder</p>
-      <p>You solve <strong>people, market, and money problems</strong>.</p>
-    </div>
-  </div>
-  <p class="talk-contrast__summary">Different skills. Different anxieties. Same underlying craft:</p>
-  <p class="talk-contrast__thesis">Find the constraint, reduce the uncertainty, keep moving.</p>
-</div>
-
-<!--
-This mindset shift matters. If you frame "business" as magic, you'll avoid it. If you frame it as a new problem space, you can learn it.
--->
-
----
-
 # How we bought ourselves time
 
-There is no single "correct" bridge to full-time:
+Going full-time means you need money to pay yourself first. There is no single "correct" bridge:
 
 - Savings
 - Consulting
 - Early customers
-- Grants or unemployment benefits
+- <span style="color: var(--slidev-theme-primary); font-weight: var(--noora-font-weight-semibold);">Grants or unemployment benefits <img src="/brand-tuist.svg" style="display: inline; width: 1.2em; height: 1.2em; vertical-align: middle; margin-left: 0.3em; filter: invert(22%) sepia(85%) saturate(5000%) hue-rotate(252deg) brightness(92%) contrast(95%);" /></span>
 - Investors
 
-We chose capital because enterprise sales cycles are slow.
+Pick whatever buys you enough time to find your first paying customers.
 
-The lesson is simpler: pick financing that matches your reality, not your ego.
+> We had the signals, but enterprise sales are slow. Our customers are large companies. By the time deals close, you can run out of runway. We raised a small round to buy ourselves that time.
 
 <!--
 I wanted to keep this section because people are curious about funding, but the important point is optionality. There are many ways to create runway.
 -->
 
 ---
+
+# What raising a small round taught us
+
+We only raised a small round. But even that was eye-opening:
+
+- With a solid team and foundation, **it's less scary than it sounds**
+- Storytelling matters. Investors buy the narrative, not just the metrics
+- Investors have their own investors. They need you to fail fast or grow big
+- Some founders optimize for raising, not building. That's a valid path, just know which game you're playing
+- Reputation compounds. Every conversation is a reference check
+
+> Our pitch: *not Google-scale*, *still Apple-focused*, *long-term returns*. Most investors stopped listening there. But developer productivity spend is growing, the market is unexplored, and our customers are large and sticky. Find investors who understand your timeline.
+
+<!--
+This slide is meant as a peek behind the curtain for developers who've never been in fundraising conversations. Not a warning against raising, just context.
+-->
+
+---
+
+# Our market
+
+<img src="/markets.png" style="max-height: 90%; width: auto; display: block; margin-inline: auto; margin-top: var(--noora-spacing-6);" />
+
+<!--
+TAM: any software company operating at scale. SAM: companies building native mobile apps at scale. SOM: companies working with Xcode at scale.
+-->
+
+---
 layout: section
+class: section-glow
 ---
 
-# 3. Put a price on the pain
+<iframe src="/tuist-glow-shader.html" class="section-shader"></iframe>
+
+# 3. Find what software companies would pay for
 
 <!--
-Developers often underprice their work because they think in implementation effort instead of business value.
+Before you can price anything, you need to find the right problem to monetize.
 -->
 
 ---
 
-# Usage is not the same as revenue
+# Finding what software companies would pay for
 
-Developer products often have a strange shape:
+You need two things: **signals** that a business model works somewhere else, and **confidence** that you bring something unique to the space.
 
-- One developer adopts the tool
-- A whole team gets the benefit
-- Sometimes the budget owner is not the adopter
-- You still carry the maintenance burden
-
-Usage is proof of relevance, not a business model.
-
-<blockquote class="talk-pizza-callout">
-  <p>🍕 Enjoying a slice is not the same as funding the restaurant.</p>
-</blockquote>
+- Align with how companies already think about paying. If a solution needs a server, paying for it feels natural
+- Look for proof in adjacent ecosystems. If someone else made it work, your version might too
+- Don't invent a business model. Adapt one that's already validated
 
 <!--
-This is the value-capture problem in more concrete terms. Adoption can compound faster than revenue unless you design for capture.
+This is about finding the right shape for the paid product. Not everything can be monetized. The trick is finding the problem that requires infrastructure, not just code.
 -->
 
 ---
 
-# Developer math, not startup math
+# What software companies won't pay for
 
-If a tool saves:
+- **Local-only tools** (including CLIs). If it runs entirely on a developer's machine, they expect it to be free
+- **Easy or interesting problems.** Their developers will build in-house solutions for the fun of it
+- **Things AI is getting good at.** If a model can generate it, the perceived value drops fast
 
-- 15 minutes per developer per day
-- for a team of 20
-- across ~220 workdays
-
-That is **1,100 hours per year**.
-
-Now multiply by loaded engineering cost.
-
-That is what companies are actually budgeting against.
+Know what sits outside the paywall so you can focus on what sits inside it.
 
 <!--
-This framing tends to land better with technical audiences than abstract business language. You're not selling software. You're selling recovered time and reduced friction.
+This is about scoping your paid product. Not everything you build can be monetized. Focus on the parts that require infrastructure, trust, or ongoing maintenance.
 -->
 
 ---
 
-# What companies actually pay for
+# Developers adopt. Companies pay.
 
-- Reliability on weird setups
-- Fast updates when Apple changes something
-- Better onboarding and fewer tribal workflows
-- Security reviews, SLAs, and accountability
+In developer tooling, you have two customers:
 
-The code matters.
+- The **developer** who discovers and champions the tool internally
+- The **company** that signs the contract and pays the invoice
 
-But the **risk reduction** often matters more.
+Your job is to make the developer look good when they pitch it to their manager.
+
+> The developer is your user. The company is your customer. Build for both.
+
+<!--
+This is the core dynamic of bottom-up developer sales. The developer is your distribution channel, the company is your revenue source.
+-->
+
+---
+
+# This is what it looks like
+
+> Hi Tuist team,
+>
+> We would like to exchange with you on the paid features of Tuist, in particular Dashboard and Remote Cache.
+>
+> Over the past months, we have fully migrated the **██████ iOS app** to Tuist. From our perspective, this decision has clearly paid off, especially in terms of project structure, scalability, and overall developer experience.
+
+The developer championed it. The company is now ready to pay.
+
+<!--
+A real email, redacted. This is what bottom-up adoption looks like when it works.
+-->
+
+---
+
+# Companies pay for not having to worry
+
+We thought they were buying features. They were buying **certainty**.
+
+- "Will this still work after the next Xcode update?"
+- "Can we pass a security review with this in our stack?"
+- "If something breaks at 2am, is someone accountable?"
+- "Can a new hire be productive without tribal knowledge?"
+
+The code is table stakes. What closes the deal is the answer to: **"Can we depend on this?"**
 
 <!--
 This was an important realization for us. Many customers are not paying for features alone. They're paying for certainty.
@@ -303,7 +370,10 @@ This was an important realization for us. Many customers are not paying for feat
 
 ---
 layout: section
+class: section-glow
 ---
+
+<iframe src="/tuist-glow-shader.html" class="section-shader"></iframe>
 
 # 4. Pick a model you can live with
 
@@ -313,7 +383,7 @@ This is where many developers get stuck. They think there is one "real" business
 
 ---
 
-# Indie business models for developers
+# Business models for developer tools
 
 | Model | Good when | Trap |
 |-------|-----------|------|
@@ -352,6 +422,8 @@ This is the model that fits us. It would be wrong for many products, which is ex
 
 ---
 
+<div style="max-width: 55%;">
+
 # Pick the model that matches your constraints
 
 Find the intersection of:
@@ -366,33 +438,26 @@ If you're building in public or in open source, add one more:
 
 Not every good business needs to become a franchise.
 
+</div>
+
+<!-- TODO: Add drawing as /pick-model.png and uncomment -->
+<!-- <img src="/pick-model.png" class="slide-right-img" /> -->
+
 <!--
 That last question matters a lot for developer audiences. Trust compounds slowly and is easy to destroy.
 -->
 
 ---
-
-# This generalizes beyond devtools
-
-- Building a Swift app? Charge for a recurring problem people want gone
-- Building a library or package? Adoption comes first; the money usually sits around it
-- Doing client work? Productize the repeated part
-- Running an OSS project? The paid layer is often hosting, guarantees, or team workflows
-
-Different wrapper. Same underlying playbook.
-
-<!--
-I want app developers in the room to hear that this is not only a devtools talk. The form changes, the logic does not.
--->
-
----
 layout: section
+class: section-glow
 ---
 
-# 5. Developers do not want to be sold to
+<iframe src="/tuist-glow-shader.html" class="section-shader"></iframe>
+
+# 5. Selling to developers
 
 <!--
-If your users are developers, your go-to-market motion is weird in a very specific way.
+Your users are developers. Your go-to-market motion is weird in a very specific way.
 -->
 
 ---
@@ -404,9 +469,7 @@ If your users are developers, your go-to-market motion is weird in a very specif
 - "Book a demo" is a weak first touch
 - Developers want to **discover, verify, and trust** a tool on their own
 
-They are difficult customers.
-
-They are also your best distribution channel.
+They are difficult customers. They are also your best distribution channel.
 
 <blockquote class="talk-pizza-callout">
   <p>🍕 Developer tools spread more like trusted restaurant recommendations than ad campaigns.</p>
@@ -414,21 +477,6 @@ They are also your best distribution channel.
 
 <!--
 Developers are skeptical, but in a healthy way. If they trust the tool, they will tell everyone.
--->
-
----
-
-# Bottom-up adoption is your friend
-
-1. One developer discovers your tool
-2. They try it and bring it to the team
-3. The team depends on it
-4. The company eventually needs support, SLAs, or accountability
-
-That is often when money enters the conversation.
-
-<!--
-This is how many developer products spread. You do not start with procurement. You earn your way there.
 -->
 
 ---
@@ -441,36 +489,20 @@ This is how many developer products spread. You do not start with procurement. Y
 - Publishing blog posts around painful transitions
 - Responding quickly when new Xcode releases broke people
 
-Every artifact taught the market:
+Every artifact taught the market: **"When this hurts, Tuist is one place to look."**
 
-**"When this hurts, Tuist is one place to look."**
+> A great product is necessary, but not sufficient. Positioning, distribution, sales, pricing: treat them as skills to learn, not chores to avoid.
 
 <!--
 This is the practical GTM slide. No magic funnel. Just repeated acts of usefulness that build recall.
 -->
 
 ---
-
-# A great product is necessary, not sufficient
-
-You still need to learn:
-
-- Positioning
-- Distribution
-- Sales
-- Pricing
-
-Building the product is familiar.
-
-Learning how people find it, trust it, and pay for it is the second half of the work.
-
-<!--
-This is the part many engineers underestimate, including me.
--->
-
----
 layout: section
+class: section-glow
 ---
+
+<iframe src="/tuist-glow-shader.html" class="section-shader"></iframe>
 
 # 6. Small is a feature
 
@@ -480,35 +512,37 @@ One of the best parts of staying small is that speed itself becomes part of the 
 
 ---
 
-# AI is leverage, not magic
+# AI makes small teams dangerous
 
-For a small team, AI is useful for:
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--noora-spacing-8); align-items: center;">
+<div>
 
-- First drafts in unfamiliar ecosystems
-- Faster prototyping and refactoring
-- Support, documentation, and research
-- Stretching a tiny team across more surface area
+We dog-food our own tools, so we're motivated to optimize developer workflows. AI agents let us ship more with fewer people.
 
-It does **not** replace taste, trust, or customer understanding.
+AI does **not** replace taste, trust, or customer understanding. But it multiplies everything else.
+
+</div>
+<div>
+<img src="/tuist-commits.png" style="width: 100%; border-radius: var(--noora-radius-xlarge); box-shadow: var(--noora-border-light-default); padding: var(--noora-spacing-5); background: var(--noora-surface-background-primary);" />
+</div>
+</div>
 
 <!--
-I wanted to keep the AI point, but make it more grounded. The leverage is real. The replacement story is not.
+The commit chart shows our velocity increasing dramatically. AI is a real force multiplier for small teams.
 -->
 
 ---
 
 # Your size is an advantage
 
-Small teams can:
+We rolled out our full feature set for Gradle support in **3 weeks**. A larger company would spend that time in planning meetings.
 
 - Ship without committees
 - Change direction quickly
 - Stay close to customers
 - Go deep on narrow, weird problems
 
-Big companies are better at distribution.
-
-They are usually worse at focus.
+Big companies have distribution. They also have bureaucracy and the innovator's dilemma. Use that.
 
 <!--
 If you're indie, you should not try to look big. You should exploit the advantages of being small.
@@ -536,7 +570,10 @@ This is encouraging for indie builders because it means you do not need to win t
 
 ---
 layout: section
+class: section-glow
 ---
+
+<iframe src="/tuist-glow-shader.html" class="section-shader"></iframe>
 
 # 7. Protect what compounds
 
@@ -546,17 +583,22 @@ When your code is public or your audience is technical, your durable assets tend
 
 ---
 
+<div style="max-width: 55%;">
+
 # Assets small teams can compound
 
-- Community trust
-- Word of mouth
-- Reputation for solving a specific pain well
-- Infrastructure or workflow expertise
-- A clear point of view
+1. **Code** (everyone starts here)
+2. **Infrastructure expertise** (you know how to run it well)
+3. **Reputation** (people associate you with the problem)
+4. **Community trust** (people vouch for you unprompted)
+5. **Word of mouth** (it scales without you)
 
-Code is important.
+Each layer is harder to build and harder to copy.
 
-But these assets are usually harder to copy.
+</div>
+
+<!-- TODO: Add pyramid drawing as /compound-assets.png and uncomment -->
+<!-- <img src="/compound-assets.png" class="slide-right-img" /> -->
 
 <!--
 This is the softer version of the moat argument. It lands better for technical audiences because it feels earned, not defensive.
@@ -564,75 +606,58 @@ This is the softer version of the moat argument. It lands better for technical a
 
 ---
 
-# Brand is not vanity
+# Brand compounds in unexpected places
 
-In developer products, brand means:
+Tuist grew organically in South Korea. Developers gave talks at local meetups. The community translated our docs to Korean.
 
-- People know your name when the pain appears
-- They assume you understand the edge cases
-- They trust that you will still be around when it matters
-
-That trust takes years to build.
+We closed our first customer there without a single sales call.
 
 <blockquote class="talk-pizza-callout">
   <p>🍕 It's what makes someone say: "If we're in Chicago, that's the place."</p>
 </blockquote>
 
-Do not trade it away cheaply.
+That trust takes years to build. Do not trade it away cheaply.
 
 <!--
-Brand in this context is not logos and gradients. It is accumulated trust.
+Brand in this context is not logos and gradients. It is accumulated trust that travels further than you expect.
 -->
 
 ---
 layout: section
+class: section-glow
 ---
 
-# 8. If you're considering indie
+<iframe src="/tuist-glow-shader.html" class="section-shader"></iframe>
+
+# 8. Looking back, looking forward
 
 <!--
-I want to end on actions, not inspiration alone.
+Honest reflections after years of building Tuist.
 -->
 
 ---
 
-# My advice, condensed
+# What we'd do differently
 
-- Start with a pain you understand deeply
-- Look for signals before writing a grand plan
-- Charge earlier than feels comfortable
-- Pick a model that fits your life, not someone else's timeline
-- Use AI for leverage, not validation
+- **Think about the business earlier.** We spent years building in the open without considering how to sustain it. The product was great, but "great" doesn't pay rent
+- **Be ready for competition.** Once you enter business territory, companies that used your open-source work for brand recognition can pivot to compete against you. It happens
+- **Charge earlier than feels comfortable.** The discomfort of asking for money fades. The cost of running out of runway doesn't
 
 <!--
-This is the summary I want people to remember.
+This is the honest slide. Not regrets, just things I see more clearly now.
 -->
 
 ---
 
 # Monday morning checklist
 
-<div class="noora-card talk-checklist">
-  <div class="noora-card__section">
-    <div class="talk-inline-tags">
-      <span class="noora-badge" data-size="large" data-style="light-fill" data-color="primary">Monday morning</span>
-      <span class="noora-badge" data-size="large" data-style="light-fill" data-color="information">Actionable</span>
-    </div>
-<ol>
-  <li>List three recurring pains you know firsthand</li>
-  <li>Pick the one that happens often and expensively</li>
-  <li>Talk to five people who have it</li>
-  <li>Build the smallest thing that removes real pain</li>
-  <li>Ask for money before polishing the brand story</li>
-</ol>
-<div class="noora-line-divider">
-  <span data-part="line"></span>
-  <span data-part="text">The punchline</span>
-  <span data-part="line"></span>
-</div>
-<p class="talk-checklist__summary">You do not need permission. You need evidence.</p>
-  </div>
-</div>
+1. List three recurring pains you know firsthand
+2. Pick the one that happens often and expensively
+3. Talk to five people who have it
+4. Build the smallest thing that removes real pain
+5. Ask for money before polishing the brand story
+
+**You do not need permission. You need evidence.**
 
 <!--
 If someone leaves with one actionable slide, I want it to be this one.
