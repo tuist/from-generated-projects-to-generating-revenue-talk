@@ -188,6 +188,8 @@ The transition from side project to business rarely happens in one dramatic mome
 -->
 
 ---
+class: pizza-bottom
+---
 
 # The hidden cost of "free" software
 
@@ -198,12 +200,12 @@ Software is cheap to copy. It is **not** cheap to maintain.
 - Reviewing PRs, triaging issues, adding features
 - Carrying the emotional load when other teams depend on your weekends
 
+See also: [Why We Can't Have Nice Software](https://andrewkelley.me/post/why-we-cant-have-nice-software.html). Software wants to be *finished*, but sustaining it never is.
+
 <blockquote class="talk-pizza-callout">
   <p>🍕 Offering a slice is easy.</p>
   <p>Running the kitchen every night is the expensive part.</p>
 </blockquote>
-
-See also: [Why We Can't Have Nice Software](https://andrewkelley.me/post/why-we-cant-have-nice-software.html). Software wants to be *finished*, but sustaining it never is.
 
 <!--
 Distribution is almost free. Maintenance is not. That's the cost open source maintainers feel first. Andrew Kelley's post makes a related point: software naturally tends toward completion, but the work of maintaining it is perpetual.
@@ -233,7 +235,9 @@ This is the slide I wish I'd seen earlier. These are the signals I would watch f
 
 # How we bought ourselves time
 
-Going full-time means you need money to pay yourself first. There is no single "correct" bridge:
+The signals were real. The next problem was runway.
+
+Going full-time means finding a bridge to your first paying customers:
 
 - Savings
 - Consulting
@@ -241,9 +245,7 @@ Going full-time means you need money to pay yourself first. There is no single "
 - <span style="color: var(--slidev-theme-primary); font-weight: var(--noora-font-weight-semibold);">Grants or unemployment benefits <img src="/brand-tuist.svg" style="display: inline; width: 1.2em; height: 1.2em; vertical-align: middle; margin-left: 0.3em; filter: invert(22%) sepia(85%) saturate(5000%) hue-rotate(252deg) brightness(92%) contrast(95%);" /></span>
 - Investors
 
-Pick whatever buys you enough time to find your first paying customers.
-
-> We had the signals, but enterprise sales are slow. Our customers are large companies. By the time deals close, you can run out of runway. We raised a small round to buy ourselves that time.
+> In our case, enterprise sales were slow, so we raised a small round to buy runway until deals closed.
 
 <!--
 I wanted to keep this section because people are curious about funding, but the important point is optionality. There are many ways to create runway.
@@ -251,7 +253,7 @@ I wanted to keep this section because people are curious about funding, but the 
 
 ---
 
-# What raising a small round taught us
+# What a small round taught us
 
 We only raised a small round. But even that was eye-opening:
 
@@ -269,9 +271,9 @@ This slide is meant as a peek behind the curtain for developers who've never bee
 
 ---
 
-# Our market
+# The market we were in
 
-<img src="/markets.png" style="max-height: 90%; width: auto; display: block; margin-inline: auto; margin-top: var(--noora-spacing-6);" />
+<img src="/markets.png" style="max-height: 72%; max-width: 72%; width: auto; display: block; margin-inline: auto; margin-top: var(--noora-spacing-8);" />
 
 <!--
 TAM: any software company operating at scale. SAM: companies building native mobile apps at scale. SOM: companies working with Xcode at scale.
@@ -292,7 +294,7 @@ Before you can price anything, you need to find the right problem to monetize.
 
 ---
 
-# Finding what software companies would pay for
+# What companies were actually willing to pay for
 
 You need two things: **signals** that a business model works somewhere else, and **confidence** that you bring something unique to the space.
 
@@ -306,11 +308,11 @@ This is about finding the right shape for the paid product. Not everything can b
 
 ---
 
-# What software companies won't pay for
+# What software companies usually won't pay for
 
-- **Local-only tools** (including CLIs). If it runs entirely on a developer's machine, they expect it to be free
-- **Easy or interesting problems.** Their developers will build in-house solutions for the fun of it
-- **Things AI is getting good at.** If a model can generate it, the perceived value drops fast
+- **Local-only tools** (including CLIs). If it runs entirely on a developer's machine, many teams expect it to be free
+- **Easy or interesting problems.** Their developers often build in-house solutions for the fun of it
+- **Things AI is getting good at.** If a model can generate it, the perceived value gets harder to defend
 
 Know what sits outside the paywall so you can focus on what sits inside it.
 
@@ -461,6 +463,8 @@ Your users are developers. Your go-to-market motion is weird in a very specific 
 -->
 
 ---
+class: pizza-bottom
+---
 
 # Selling to developers is hard
 
@@ -549,6 +553,8 @@ If you're indie, you should not try to look big. You should exploit the advantag
 -->
 
 ---
+class: pizza-bottom
+---
 
 # You do not need a hot market
 
@@ -605,18 +611,20 @@ This is the softer version of the moat argument. It lands better for technical a
 -->
 
 ---
+class: pizza-bottom
+---
 
 # Brand compounds in unexpected places
 
-Tuist grew organically in South Korea. Developers gave talks at local meetups. The community translated our docs to Korean.
+- Tuist grew organically in South Korea
+- Local developers gave talks and translated the docs
+- We closed our first customer there without a single sales call
 
-We closed our first customer there without a single sales call.
+**That trust takes years to build. Do not trade it away cheaply.**
 
 <blockquote class="talk-pizza-callout">
   <p>🍕 It's what makes someone say: "If we're in Chicago, that's the place."</p>
 </blockquote>
-
-That trust takes years to build. Do not trade it away cheaply.
 
 <!--
 Brand in this context is not logos and gradients. It is accumulated trust that travels further than you expect.

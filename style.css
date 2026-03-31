@@ -30,6 +30,12 @@ body,
   background: var(--noora-surface-background-secondary);
 }
 
+.slidev-layout.pizza-bottom {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
 .slidev-layout h1,
 .slidev-layout h2,
 .slidev-layout h3,
@@ -177,6 +183,10 @@ body,
   font: var(--noora-font-weight-medium) var(--noora-font-heading-medium);
 }
 
+.slidev-layout.pizza-bottom blockquote.talk-pizza-callout {
+  margin-top: auto;
+}
+
 .slidev-layout blockquote.talk-pizza-callout p {
   color: var(--noora-surface-label-primary);
   font: var(--noora-font-weight-medium) var(--noora-font-body-large);
@@ -285,6 +295,7 @@ body,
 .slidev-layout .talk-outro__actions a:hover,
 .slidev-layout .talk-outro__actions a:visited {
   text-decoration: none !important;
+  border: none !important;
 }
 
 .talk-product-link {
