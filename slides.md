@@ -80,115 +80,124 @@ I'm not here to say everyone should build a venture-backed company. I'm here to 
 -->
 
 ---
-
-# What "indie" means in this talk
-
-- Not "must stay solo forever"
-- Means **small, intentional, and close to customers**
-- Can look like a paid app, niche SaaS, OSS business, or productized consulting
-- The goal: buy back your time with something you own
-
-<!--
-I want to widen the definition. Indie is not an aesthetic. It's a way of building with tight feedback loops and fewer layers between you and the customer.
--->
-
----
-
-# What we'll cover
-
-1. **Start with a painful problem**
-2. **Knowing when it's more than a hobby**
-3. **Find what software companies would pay for**
-4. **Pick a model you can live with**
-5. **Selling to developers**
-6. **Small is a feature**
-7. **Protect what compounds**
-8. **Looking back, looking forward**
-
-<!--
-A roadmap for the talk. Each section mixes Tuist's experience with takeaways you can apply to your own projects.
--->
-
----
 layout: section
 class: section-glow
 ---
 
 <iframe src="/tuist-glow-shader.html" class="section-shader"></iframe>
 
-# 1. Start with a painful problem
+<div class="talk-section-heading">
+  <span class="noora-badge talk-section-heading__part" data-size="large" data-style="light-fill" data-color="neutral">Part one</span>
+  <h1 class="talk-section-heading__title">A hobby</h1>
+</div>
 
 <!--
 Most good indie projects do not start with market research. They start with irritation.
 -->
 
 ---
+class: timeline-slide
+---
 
-# It started as a side project
+# Xcode projects at scale suck
 
 - 2017: Frustrated with Xcode project conflicts at work
+- Built `tuist/xcodeproj` as a Swift CRUD layer for Xcode projects
 - XcodeGen emerged around the same time
 - I wanted Swift manifests with compile-time safety
 - Project generation became a way to **compress Xcode complexity**
 - Shared it. People started using it.
 
-**Sound familiar?**
+<img src="/it-started-as-a-side-project.png" class="slide-right-img" style="top: auto; bottom: 4.75rem; transform: none; height: 82%;" />
 
-Most of you have solved a problem like this at least once.
-
-<img src="/it-started-as-a-side-project.png" class="slide-right-img" style="top: auto; bottom: 0; transform: none; height: 90%;" />
+<div class="talk-timeline" style="--timeline-orange-fill: 10%; --timeline-green-fill: 10%;">
+  <div class="talk-timeline__labels" aria-hidden="true">
+    <span class="is-active">2017</span>
+    <span>2018</span>
+    <span>2019</span>
+    <span>2020</span>
+    <span>2021</span>
+    <span>2022</span>
+    <span>2023</span>
+    <span>2024</span>
+    <span>2025</span>
+    <span>2026</span>
+  </div>
+  <div class="talk-timeline__track"></div>
+  <div class="talk-timeline__events" aria-hidden="true">
+    <span><img src="/soundcloud.svg" class="talk-timeline__logo soundcloud" alt="" /></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
 
 <!--
 This was not visionary. It was practical. I had pain, I built a fix, and other people had the same pain.
 -->
 
 ---
+class: pizza-bottom timeline-slide wide-title
+---
 
-# Boring problems are underrated
+# It kept growing on the side
 
-> Do the **uninteresting, hard things** that nobody else wants to do.
-> -- Peter Steinberger
+- It helped me get a job at Shopify as a mobile tooling engineer
+- I also met Marek there, who later became my co-founder
+- None of my employers ever used it
+- Users, contributors, support, and feature requests kept growing
+- It was still something I could manage in my spare time
 
-Nobody wakes up excited about `.pbxproj` files.
+<div class="talk-terminal-window">
+  <div data-part="bar">
+    <span data-part="language">CLI</span>
+    <span data-part="hint">where most of the value lived</span>
+  </div>
+  <div data-part="code">
+    <code>$ tuist generate</code>
+  </div>
+</div>
 
-But painful, repeated, boring problems are often where the money is.
-
-<img src="/boring-problems.png" style="margin-top: var(--noora-spacing-6); max-height: 40%; width: auto; display: block; margin-inline: auto;" />
+<div class="talk-timeline" style="--timeline-orange-fill: 10%; --timeline-green-fill: 30%;">
+  <div class="talk-timeline__labels" aria-hidden="true">
+    <span>2017</span>
+    <span>2018</span>
+    <span class="is-active">2019</span>
+    <span>2020</span>
+    <span>2021</span>
+    <span>2022</span>
+    <span>2023</span>
+    <span>2024</span>
+    <span>2025</span>
+    <span>2026</span>
+  </div>
+  <div class="talk-timeline__track"></div>
+  <div class="talk-timeline__events" aria-hidden="true">
+    <span><img src="/soundcloud.svg" class="talk-timeline__logo soundcloud" alt="" /></span>
+    <span><img src="/shopify.svg" class="talk-timeline__logo shopify" alt="" /></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
 
 <!--
-That quote has stayed with me for years. Glamorous ideas attract attention. Uninteresting hard problems attract grateful users.
+This was an important signal in retrospect. Tuist was valuable enough to shape my career, and even led me to meet Marek, who later became my co-founder, but not yet something I could dedicate myself to full-time. The load was growing, contributors were showing up, and the center of gravity was clearly the CLI and project generation. It was still survivable on nights and weekends.
 -->
 
 ---
-
-# The best ideas usually start like this
-
-- A frustration you keep hitting at work
-- A workaround you repeat every week
-- A thing your team complains about in Slack
-- A tool you made "just for yourself" that others keep asking for
-
-That is often the first signal of an indie opportunity.
-
-<!--
-The early question is not "is this a billion-dollar business?" It's "does this pain happen often enough that people want relief?"
--->
-
----
-layout: section
-class: section-glow
----
-
-<iframe src="/tuist-glow-shader.html" class="section-shader"></iframe>
-
-# 2. Knowing when it's more than a hobby
-
-<!--
-The transition from side project to business rarely happens in one dramatic moment. It usually looks like accumulating signals.
--->
-
----
-class: pizza-bottom
+class: pizza-bottom timeline-slide wide-title
 ---
 
 # The hidden cost of "free" software
@@ -207,167 +216,136 @@ See also: [Why We Can't Have Nice Software](https://andrewkelley.me/post/why-we-
   <p>Running the kitchen every night is the expensive part.</p>
 </blockquote>
 
+<div class="talk-timeline" style="--timeline-orange-fill: 10%; --timeline-green-fill: 40%;">
+  <div class="talk-timeline__labels" aria-hidden="true">
+    <span>2017</span>
+    <span>2018</span>
+    <span>2019</span>
+    <span class="is-active">2020</span>
+    <span>2021</span>
+    <span>2022</span>
+    <span>2023</span>
+    <span>2024</span>
+    <span>2025</span>
+    <span>2026</span>
+  </div>
+  <div class="talk-timeline__track"></div>
+  <div class="talk-timeline__events" aria-hidden="true">
+    <span><img src="/soundcloud.svg" class="talk-timeline__logo soundcloud" alt="" /></span>
+    <span><img src="/shopify.svg" class="talk-timeline__logo shopify" alt="" /></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
 <!--
 Distribution is almost free. Maintenance is not. That's the cost open source maintainers feel first. Andrew Kelley's post makes a related point: software naturally tends toward completion, but the work of maintaining it is perpetual.
 -->
 
 ---
+class: pizza-bottom timeline-slide wide-title
+---
 
-# Signals this might be a business
+# We had already built something hard to replace
 
-<ul class="talk-signal-list">
-  <li>🧱 Users depend on it for real work</li>
-  <li>🔒 Companies ask for reliability, security, or support</li>
-  <li>🤝 Contributors show up without you recruiting them</li>
-  <li>🪝 The roadmap gets pulled by demand, not pushed by your curiosity</li>
-  <li style="color: var(--slidev-theme-primary); font-weight: var(--noora-font-weight-semibold);">⏳ The project consumes more time than you can give for free <img src="/brand-tuist.svg" style="display: inline; width: 1.2em; height: 1.2em; vertical-align: middle; margin-left: 0.3em; filter: invert(22%) sepia(85%) saturate(5000%) hue-rotate(252deg) brightness(92%) contrast(95%);" /></li>
-  <li>💳 You hear some version of: "Can my company pay for this?"</li>
-</ul>
+It had taken years and a lot of human capital to build:
 
-When the work stops being random and starts being predictable, pay attention.
+- A community of users and contributors
+- A strong brand built on openness
+- Teams using us every day through the CLI
+- Deep Xcode and project generation know-how
 
+<div class="talk-timeline" style="--timeline-orange-fill: 10%; --timeline-green-fill: 50%;">
+  <div class="talk-timeline__labels" aria-hidden="true">
+    <span>2017</span>
+    <span>2018</span>
+    <span>2019</span>
+    <span>2020</span>
+    <span class="is-active">2021</span>
+    <span>2022</span>
+    <span>2023</span>
+    <span>2024</span>
+    <span>2025</span>
+    <span>2026</span>
+  </div>
+  <div class="talk-timeline__track"></div>
+  <div class="talk-timeline__events" aria-hidden="true">
+    <span><img src="/soundcloud.svg" class="talk-timeline__logo soundcloud" alt="" /></span>
+    <span><img src="/shopify.svg" class="talk-timeline__logo shopify" alt="" /></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
 
 <!--
-This is the slide I wish I'd seen earlier. These are the signals I would watch for in any side project today.
+By then, this was no longer just a side project repository. It was accumulated trust, accumulated know-how, and accumulated usage. That made the question less "should we keep doing this?" and more "how do we sustain something people already depend on?"
 -->
 
 ---
-
-# How we bought ourselves time
-
-The signals were real. The next problem was runway.
-
-Going full-time means finding a bridge to your first paying customers:
-
-- Savings
-- Consulting
-- Early customers
-- <span style="color: var(--slidev-theme-primary); font-weight: var(--noora-font-weight-semibold);">Grants or unemployment benefits <img src="/brand-tuist.svg" style="display: inline; width: 1.2em; height: 1.2em; vertical-align: middle; margin-left: 0.3em; filter: invert(22%) sepia(85%) saturate(5000%) hue-rotate(252deg) brightness(92%) contrast(95%);" /></span>
-- Investors
-
-> In our case, enterprise sales were slow, so we raised a small round to buy runway until deals closed.
-
-<!--
-I wanted to keep this section because people are curious about funding, but the important point is optionality. There are many ways to create runway.
--->
-
+class: pizza-bottom timeline-slide wide-title
 ---
 
-# What a small round taught us
+# Donations felt like the obvious answer
 
-We only raised a small round. But even that was eye-opening:
+That made Tuist a valuable asset for established companies that couldn't figure out GTM around developer tools.
 
-- With a solid team and foundation, **it's less scary than it sounds**
-- Storytelling matters. Investors buy the narrative, not just the metrics
-- Investors have their own investors. They need you to fail fast or grow big
-- Some founders optimize for raising, not building. That's a valid path, just know which game you're playing
-- Reputation compounds. Every conversation is a reference check
+- We felt a gravitational pull toward a donation or sponsorship model
+- It pairs nicely with low confidence in your ability to build a business
+- The value exchange is deeply unbalanced
+- We get peanuts; they get distribution, goodwill, and a "Company X supports Tuist" story
 
-> Our pitch: *not Google-scale*, *still Apple-focused*, *long-term returns*. Most investors stopped listening there. But developer productivity spend is growing, the market is unexplored, and our customers are large and sticky. Find investors who understand your timeline.
+<div class="talk-message-window">
+  <div data-part="bar">
+    <span data-part="label">Sponsorship pitch</span>
+  </div>
+  <div data-part="body">
+    <p>Hi,</p>
+    <p>We thought you might be interested in doing a few posts a month about us. We can donate $50 a month.</p>
+  </div>
+</div>
 
-<!--
-This slide is meant as a peek behind the curtain for developers who've never been in fundraising conversations. Not a warning against raising, just context.
--->
-
----
-
-# The market we were in
-
-<img src="/markets.png" style="max-height: 72%; max-width: 72%; width: auto; display: block; margin-inline: auto; margin-top: var(--noora-spacing-8);" />
-
-<!--
-TAM: any software company operating at scale. SAM: companies building native mobile apps at scale. SOM: companies working with Xcode at scale.
--->
-
----
-layout: section
-class: section-glow
----
-
-<iframe src="/tuist-glow-shader.html" class="section-shader"></iframe>
-
-# 3. Find what software companies would pay for
-
-<!--
-Before you can price anything, you need to find the right problem to monetize.
--->
-
----
-
-# What companies were actually willing to pay for
-
-You need two things: **signals** that a business model works somewhere else, and **confidence** that you bring something unique to the space.
-
-- Align with how companies already think about paying. If a solution needs a server, paying for it feels natural
-- Look for proof in adjacent ecosystems. If someone else made it work, your version might too
-- Don't invent a business model. Adapt one that's already validated
+<div class="talk-timeline" style="--timeline-orange-fill: 10%; --timeline-green-fill: 55%;">
+  <div class="talk-timeline__labels" aria-hidden="true">
+    <span>2017</span>
+    <span>2018</span>
+    <span>2019</span>
+    <span>2020</span>
+    <span>2021</span>
+    <span class="is-active">2022</span>
+    <span>2023</span>
+    <span>2024</span>
+    <span>2025</span>
+    <span>2026</span>
+  </div>
+  <div class="talk-timeline__track"></div>
+  <div class="talk-timeline__events" aria-hidden="true">
+    <span><img src="/soundcloud.svg" class="talk-timeline__logo soundcloud" alt="" /></span>
+    <span><img src="/shopify.svg" class="talk-timeline__logo shopify" alt="" /></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
 
 <!--
-This is about finding the right shape for the paid product. Not everything can be monetized. The trick is finding the problem that requires infrastructure, not just code.
--->
-
----
-
-# What software companies usually won't pay for
-
-- **Local-only tools** (including CLIs). If it runs entirely on a developer's machine, many teams expect it to be free
-- **Easy or interesting problems.** Their developers often build in-house solutions for the fun of it
-- **Things AI is getting good at.** If a model can generate it, the perceived value gets harder to defend
-
-Know what sits outside the paywall so you can focus on what sits inside it.
-
-<!--
-This is about scoping your paid product. Not everything you build can be monetized. Focus on the parts that require infrastructure, trust, or ongoing maintenance.
--->
-
----
-
-# Developers adopt. Companies pay.
-
-In developer tooling, you have two customers:
-
-- The **developer** who discovers and champions the tool internally
-- The **company** that signs the contract and pays the invoice
-
-Your job is to make the developer look good when they pitch it to their manager.
-
-> The developer is your user. The company is your customer. Build for both.
-
-<!--
-This is the core dynamic of bottom-up developer sales. The developer is your distribution channel, the company is your revenue source.
--->
-
----
-
-# This is what it looks like
-
-> Hi Tuist team,
->
-> We would like to exchange with you on the paid features of Tuist, in particular Dashboard and Remote Cache.
->
-> Over the past months, we have fully migrated the **██████ iOS app** to Tuist. From our perspective, this decision has clearly paid off, especially in terms of project structure, scalability, and overall developer experience.
-
-The developer championed it. The company is now ready to pay.
-
-<!--
-A real email, redacted. This is what bottom-up adoption looks like when it works.
--->
-
----
-
-# Companies pay for not having to worry
-
-We thought they were buying features. They were buying **certainty**.
-
-- "Will this still work after the next Xcode update?"
-- "Can we pass a security review with this in our stack?"
-- "If something breaks at 2am, is someone accountable?"
-- "Can a new hire be productive without tribal knowledge?"
-
-The code is table stakes. What closes the deal is the answer to: **"Can we depend on this?"**
-
-<!--
-This was an important realization for us. Many customers are not paying for features alone. They're paying for certainty.
+Once Tuist was clearly valuable, the easiest path to imagine was sponsorship. Established companies know how to justify donations and brand support internally. That path is seductive because it avoids the harder question of what the real product and value exchange should be. But it usually means they capture far more value than you do.
 -->
 
 ---
@@ -377,153 +355,863 @@ class: section-glow
 
 <iframe src="/tuist-glow-shader.html" class="section-shader"></iframe>
 
-# 4. Pick a model you can live with
+<div class="talk-section-heading">
+  <span class="noora-badge talk-section-heading__part" data-size="large" data-style="light-fill" data-color="neutral">Part two</span>
+  <h1 class="talk-section-heading__title">It can be a business</h1>
+</div>
+
+<!--
+The transition from side project to business rarely happens in one dramatic moment. It usually looks like accumulating signals.
+-->
+
+---
+class: pizza-bottom timeline-slide wide-title
+---
+
+# Taking the leap was scary
+
+- Standing still meant either letting Tuist stagnate or paying for it with our nights and weekends
+- We knew the donations model wouldn't work
+- We didn't want to let the project die, or keep burning ourselves out to sustain it
+- We still had no clear idea how to make the leap work
+
+<div class="talk-timeline" style="--timeline-orange-fill: 10%; --timeline-green-fill: 60%;">
+  <div class="talk-timeline__labels" aria-hidden="true">
+    <span>2017</span>
+    <span>2018</span>
+    <span>2019</span>
+    <span>2020</span>
+    <span>2021</span>
+    <span class="is-active">2022</span>
+    <span>2023</span>
+    <span>2024</span>
+    <span>2025</span>
+    <span>2026</span>
+  </div>
+  <div class="talk-timeline__track"></div>
+  <div class="talk-timeline__events" aria-hidden="true">
+    <span><img src="/soundcloud.svg" class="talk-timeline__logo soundcloud" alt="" /></span>
+    <span><img src="/shopify.svg" class="talk-timeline__logo shopify" alt="" /></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<!--
+At that point, the status quo no longer felt stable. We had already learned that donations were not a real answer, and doing nothing meant either letting Tuist decay or letting it consume more and more of our lives. The problem was that acting on that insight meant stepping into a kind of uncertainty we didn't yet feel prepared for.
+-->
+
+---
+class: full-bleed-image
+---
+
+<div class="talk-article-shot">
+  <div class="talk-article-shot__hero">
+    <div class="talk-article-shot__nav">
+      <div class="talk-article-shot__brand">
+        <img src="/shopify.svg" alt="Shopify" />
+        <span>shopify</span>
+      </div>
+      <div class="talk-article-shot__links">
+        <span>All news</span>
+        <span>Company</span>
+        <span>Product</span>
+        <span>POV</span>
+        <span>Insights</span>
+        <span>Press releases</span>
+        <span>About us</span>
+      </div>
+      <div class="talk-article-shot__search">Search</div>
+    </div>
+    <div class="talk-article-shot__header">
+      <p>COMPANY</p>
+      <h1>Important team and business changes</h1>
+      <span>May 4, 2023</span>
+    </div>
+  </div>
+  <div class="talk-article-shot__body">
+    <img src="/shopify-business-changes.jpg" class="talk-full-bleed-image" alt="Shopify business changes article image" />
+  </div>
+</div>
+
+---
+class: pizza-bottom timeline-slide wide-title
+---
+
+# We decided to build a company
+
+By 2023, it was no longer a side project.
+
+- We had signals companies would pay for new features
+- I reached out to Marek, still at Shopify
+- We had already decided to go for it
+- Marek joined a bit later, after leaving Shopify
+
+<div class="talk-timeline talk-timeline--with-gray" style="--timeline-orange-fill: 10%; --timeline-green-fill: 65%; --timeline-gray-fill: 67.5%;">
+  <div class="talk-timeline__labels" aria-hidden="true">
+    <span>2017</span>
+    <span>2018</span>
+    <span>2019</span>
+    <span>2020</span>
+    <span>2021</span>
+    <span>2022</span>
+    <span class="is-active">2023</span>
+    <span>2024</span>
+    <span>2025</span>
+    <span>2026</span>
+  </div>
+  <div class="talk-timeline__track">
+    <span class="talk-timeline__segment talk-timeline__segment--gray"></span>
+  </div>
+  <div class="talk-timeline__events" aria-hidden="true">
+    <span><img src="/soundcloud.svg" class="talk-timeline__logo soundcloud" alt="" /></span>
+    <span><img src="/shopify.svg" class="talk-timeline__logo shopify" alt="" /></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span><img src="/german-government.svg" class="talk-timeline__logo government" alt="" /></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<!--
+This is the point where the story becomes deliberate. The slide should feel like a decision, not a framework.
+-->
+
+---
+class: pizza-bottom timeline-slide wide-title
+---
+
+# Our business mental model
+
+We needed a business model for companies building apps with Xcode at scale.
+
+- Teams don't pay for CLIs. They pay for productivity infrastructure
+- So we looked for server-backed problems like caching and build acceleration
+- They had to build on the foundations we already had
+- And they had to support a B2B sales motion
+
+<div class="talk-timeline talk-timeline--with-gray" style="--timeline-orange-fill: 10%; --timeline-green-fill: 65%; --timeline-gray-fill: 67.5%;">
+  <div class="talk-timeline__labels" aria-hidden="true">
+    <span>2017</span>
+    <span>2018</span>
+    <span>2019</span>
+    <span>2020</span>
+    <span>2021</span>
+    <span>2022</span>
+    <span class="is-active">2023</span>
+    <span>2024</span>
+    <span>2025</span>
+    <span>2026</span>
+  </div>
+  <div class="talk-timeline__track">
+    <span class="talk-timeline__segment talk-timeline__segment--gray"></span>
+  </div>
+  <div class="talk-timeline__events" aria-hidden="true">
+    <span><img src="/soundcloud.svg" class="talk-timeline__logo soundcloud" alt="" /></span>
+    <span><img src="/shopify.svg" class="talk-timeline__logo shopify" alt="" /></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span><img src="/german-government.svg" class="talk-timeline__logo government" alt="" /></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<!--
+This is the business filter: not abstract strategy, but the constraints that shaped what we could credibly sell.
+-->
+
+---
+class: pizza-bottom timeline-slide wide-title
+---
+
+# Our openness model
+
+We wanted to stay open, but we also needed time to move value capture toward infrastructure.
+
+- The server would start under Fair Core
+- A small CLI extension would be closed source too
+- The plan was to move toward OSS as the market grew and value shifted to operational complexity
+- We also wanted openness to shape how we built the product and company
+- That also reduced early risks: competitors, self-hosting customers, and cloud vendors
+
+<blockquote>
+  <p>HashiCorp spent four years building the foundations of its open core model. We had one.</p>
+</blockquote>
+
+<div class="talk-timeline talk-timeline--with-gray" style="--timeline-orange-fill: 10%; --timeline-green-fill: 65%; --timeline-gray-fill: 67.5%;">
+  <div class="talk-timeline__labels" aria-hidden="true">
+    <span>2017</span>
+    <span>2018</span>
+    <span>2019</span>
+    <span>2020</span>
+    <span>2021</span>
+    <span>2022</span>
+    <span class="is-active">2023</span>
+    <span>2024</span>
+    <span>2025</span>
+    <span>2026</span>
+  </div>
+  <div class="talk-timeline__track">
+    <span class="talk-timeline__segment talk-timeline__segment--gray"></span>
+  </div>
+  <div class="talk-timeline__events" aria-hidden="true">
+    <span><img src="/soundcloud.svg" class="talk-timeline__logo soundcloud" alt="" /></span>
+    <span><img src="/shopify.svg" class="talk-timeline__logo shopify" alt="" /></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span><img src="/german-government.svg" class="talk-timeline__logo government" alt="" /></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<!--
+This was not ideological. It was a temporary way to stay open-minded about the long-term model while protecting enough value to survive the first year.
+-->
+
+---
+class: pizza-bottom timeline-slide wide-title
+---
+
+# Why not just go closed source?
+
+Because open source lets you capture less per user, but from a much larger market.
+
+- Closed source would have made value capture simpler
+- But open source gave us access to a much larger market
+- And it made the product stronger through trust, adoption, and contribution
+- So we wanted to capture value around operating it at scale
+
+<div class="talk-timeline talk-timeline--with-gray" style="--timeline-orange-fill: 10%; --timeline-green-fill: 65%; --timeline-gray-fill: 67.5%;">
+  <div class="talk-timeline__labels" aria-hidden="true">
+    <span>2017</span>
+    <span>2018</span>
+    <span>2019</span>
+    <span>2020</span>
+    <span>2021</span>
+    <span>2022</span>
+    <span class="is-active">2023</span>
+    <span>2024</span>
+    <span>2025</span>
+    <span>2026</span>
+  </div>
+  <div class="talk-timeline__track">
+    <span class="talk-timeline__segment talk-timeline__segment--gray"></span>
+  </div>
+  <div class="talk-timeline__events" aria-hidden="true">
+    <span><img src="/soundcloud.svg" class="talk-timeline__logo soundcloud" alt="" /></span>
+    <span><img src="/shopify.svg" class="talk-timeline__logo shopify" alt="" /></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span><img src="/german-government.svg" class="talk-timeline__logo government" alt="" /></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<!--
+This is the core tradeoff: capture less per user, but create more value through reach, trust, and contributions.
+-->
+
+---
+class: pizza-bottom timeline-slide wide-title
+---
+
+# We had demand, but not enough runway
+
+We had already closed some enterprise customers. The problem was time.
+
+- We had learned B2B deals can take months, sometimes a year, to close
+- We'd need many more of them before we could pay ourselves a salary
+- So the real question became how to buy enough time
+- Savings were one option. Raising a round was the other
+
+<div class="talk-timeline talk-timeline--with-gray" style="--timeline-orange-fill: 10%; --timeline-green-fill: 65%; --timeline-gray-fill: 75%;">
+  <div class="talk-timeline__labels" aria-hidden="true">
+    <span>2017</span>
+    <span>2018</span>
+    <span>2019</span>
+    <span>2020</span>
+    <span>2021</span>
+    <span>2022</span>
+    <span class="is-active">2023</span>
+    <span>2024</span>
+    <span>2025</span>
+    <span>2026</span>
+  </div>
+  <div class="talk-timeline__track">
+    <span class="talk-timeline__segment talk-timeline__segment--gray"></span>
+  </div>
+  <div class="talk-timeline__events" aria-hidden="true">
+    <span><img src="/soundcloud.svg" class="talk-timeline__logo soundcloud" alt="" /></span>
+    <span><img src="/shopify.svg" class="talk-timeline__logo shopify" alt="" /></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span><img src="/german-government.svg" class="talk-timeline__logo government" alt="" /></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<!--
+This is the bridge into fundraising: demand existed, but enterprise sales alone were too slow to fund the leap.
+-->
+
+---
+class: pizza-bottom timeline-slide wide-title
+---
+
+# We pitched the upside, honestly
+
+We came in with a vision, but kept our feet on the ground.
+
+- **What sounded good:** we already had users and companies using Tuist
+- **What sounded good:** we had shown we could build
+- **What sounded good:** our solutions could go beyond the Apple ecosystem
+- **What sounded good:** the long-term market was all software organizations
+- **What we were honest about:** we weren't going to play the raise-for-the-sake-of-raising game
+- **What we were honest about:** long-term, we wanted to be fully OSS
+- **What we were honest about:** it was our first time founding a company
+
+<div class="talk-timeline talk-timeline--with-gray" style="--timeline-orange-fill: 10%; --timeline-green-fill: 65%; --timeline-gray-fill: 75%;">
+  <div class="talk-timeline__labels" aria-hidden="true">
+    <span>2017</span>
+    <span>2018</span>
+    <span>2019</span>
+    <span>2020</span>
+    <span>2021</span>
+    <span>2022</span>
+    <span class="is-active">2023</span>
+    <span>2024</span>
+    <span>2025</span>
+    <span>2026</span>
+  </div>
+  <div class="talk-timeline__track">
+    <span class="talk-timeline__segment talk-timeline__segment--gray"></span>
+  </div>
+  <div class="talk-timeline__events" aria-hidden="true">
+    <span><img src="/soundcloud.svg" class="talk-timeline__logo soundcloud" alt="" /></span>
+    <span><img src="/shopify.svg" class="talk-timeline__logo shopify" alt="" /></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span><img src="/german-government.svg" class="talk-timeline__logo government" alt="" /></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<!--
+The pitch was intentionally balanced: enough ambition for investors to see upside, enough honesty that it still felt like us.
+-->
+
+---
+class: pizza-bottom timeline-slide wide-title
+---
+
+# A few things we learned
+
+This was just our experience, but a few patterns showed up quickly.
+
+- Some wanted a bigger swing: "don't you need more?"
+- Social proof changed the room fast
+- Some studied the market deeply. Others wanted a familiar category
+
+<blockquote class="talk-signals-quote">
+  <p class="talk-signals-quote__text">"The business is the envelope. The real thing is the letter inside."</p>
+  <p class="talk-signals-quote__eyebrow">Jason Fried, 37signals</p>
+  <p class="talk-signals-quote__body">That framing stayed with us: raise enough to keep building the product, but don't let the envelope become the point.</p>
+  <p class="talk-signals-quote__source"><a href="https://www.youtube.com/watch?v=BdDCtMA1gSw" target="_blank" rel="noreferrer">Interview</a></p>
+</blockquote>
+
+<div class="talk-timeline talk-timeline--with-gray" style="--timeline-orange-fill: 10%; --timeline-green-fill: 65%; --timeline-gray-fill: 75%;">
+  <div class="talk-timeline__labels" aria-hidden="true">
+    <span>2017</span>
+    <span>2018</span>
+    <span>2019</span>
+    <span>2020</span>
+    <span>2021</span>
+    <span>2022</span>
+    <span class="is-active">2023</span>
+    <span>2024</span>
+    <span>2025</span>
+    <span>2026</span>
+  </div>
+  <div class="talk-timeline__track">
+    <span class="talk-timeline__segment talk-timeline__segment--gray"></span>
+  </div>
+  <div class="talk-timeline__events" aria-hidden="true">
+    <span><img src="/soundcloud.svg" class="talk-timeline__logo soundcloud" alt="" /></span>
+    <span><img src="/shopify.svg" class="talk-timeline__logo shopify" alt="" /></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span><img src="/german-government.svg" class="talk-timeline__logo government" alt="" /></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<!--
+This should land as observation, not judgment. Different investors play different games; this is just what became visible once we were in the room.
+-->
+
+---
+class: pizza-bottom timeline-slide wide-title
+---
+
+# Our proposal
+
+The ask itself was actually pretty simple.
+
+- Raise enough to become profitable in two years
+- Do it with a team of four people, around $1M in total
+- Validate the model in the Apple ecosystem first
+- Then expand into Android and Gradle
+- Design and server expertise: Marek on tech, both on product, me on operations
+
+<div class="talk-timeline talk-timeline--with-gray" style="--timeline-orange-fill: 10%; --timeline-green-fill: 65%; --timeline-gray-fill: 75%;">
+  <div class="talk-timeline__labels" aria-hidden="true">
+    <span>2017</span>
+    <span>2018</span>
+    <span>2019</span>
+    <span>2020</span>
+    <span>2021</span>
+    <span>2022</span>
+    <span class="is-active">2023</span>
+    <span>2024</span>
+    <span>2025</span>
+    <span>2026</span>
+  </div>
+  <div class="talk-timeline__track">
+    <span class="talk-timeline__segment talk-timeline__segment--gray"></span>
+  </div>
+  <div class="talk-timeline__events" aria-hidden="true">
+    <span><img src="/soundcloud.svg" class="talk-timeline__logo soundcloud" alt="" /></span>
+    <span><img src="/shopify.svg" class="talk-timeline__logo shopify" alt="" /></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span><img src="/german-government.svg" class="talk-timeline__logo government" alt="" /></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<!--
+This should feel concrete and modest: not a moonshot deck, just a specific proposal to buy enough time to prove the model.
+-->
+
+---
+class: pizza-bottom timeline-slide wide-title
+---
+
+# Binary caching
+
+- Gradle's build cache already proved this is a viable business
+- Project generation gave us the foundation to build on incrementally
+- Carthage showed that distributing and consuming pre-built binaries works
+- It works with both local targets and Swift packages
+
+<div class="talk-timeline talk-timeline--with-gray" style="--timeline-orange-fill: 10%; --timeline-green-fill: 65%; --timeline-gray-fill: 75%;">
+  <div class="talk-timeline__labels" aria-hidden="true">
+    <span>2017</span>
+    <span>2018</span>
+    <span>2019</span>
+    <span>2020</span>
+    <span>2021</span>
+    <span>2022</span>
+    <span class="is-active">2023</span>
+    <span>2024</span>
+    <span>2025</span>
+    <span>2026</span>
+  </div>
+  <div class="talk-timeline__track">
+    <span class="talk-timeline__segment talk-timeline__segment--gray"></span>
+  </div>
+  <div class="talk-timeline__events" aria-hidden="true">
+    <span><img src="/soundcloud.svg" class="talk-timeline__logo soundcloud" alt="" /></span>
+    <span><img src="/shopify.svg" class="talk-timeline__logo shopify" alt="" /></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span><img src="/german-government.svg" class="talk-timeline__logo government" alt="" /></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<!--
+Binary caching was the first product idea that felt like a real business. Gradle had already validated the model in the JVM world. We had project generation as a foundation, and Carthage had proven that pre-built binaries could work in the Apple ecosystem. The gap was Swift packages.
+-->
+
+---
+layout: section
+class: section-glow
+---
+
+<iframe src="/tuist-glow-shader.html" class="section-shader"></iframe>
+
+<div class="talk-section-heading">
+  <span class="noora-badge talk-section-heading__part" data-size="large" data-style="light-fill" data-color="neutral">Part four</span>
+  <h1 class="talk-section-heading__title">How we made it happen</h1>
+</div>
+
+<!--
+This section shifts from the pitch itself to the concrete moves that made the business real.
+-->
+
+---
+
+# Engineering
+
+- We built the server in Elixir to get the most from a small team
+- We shipped cache and insights for builds, tests, and bundles
+- We dog-fooded everything: Tuist running on Tuist
+- We moved the CLI, design system, server, and app into one monorepo
+
+<div class="talk-timeline talk-timeline--with-gray" style="--timeline-orange-fill: 10%; --timeline-green-fill: 65%; --timeline-gray-fill: 75%; --timeline-invested-fill: 82.5%;">
+  <div class="talk-timeline__labels" aria-hidden="true">
+    <span>2017</span>
+    <span>2018</span>
+    <span>2019</span>
+    <span>2020</span>
+    <span>2021</span>
+    <span>2022</span>
+    <span>2023</span>
+    <span class="is-active">2024</span>
+    <span>2025</span>
+    <span>2026</span>
+  </div>
+  <div class="talk-timeline__track">
+    <span class="talk-timeline__segment talk-timeline__segment--gray"></span>
+    <span class="talk-timeline__segment talk-timeline__segment--invested"></span>
+  </div>
+  <div class="talk-timeline__events" aria-hidden="true">
+    <span><img src="/soundcloud.svg" class="talk-timeline__logo soundcloud" alt="" /></span>
+    <span><img src="/shopify.svg" class="talk-timeline__logo shopify" alt="" /></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span><img src="/german-government.svg" class="talk-timeline__logo government" alt="" /></span>
+    <span><span class="talk-timeline__symbol invested">$</span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<!--
+This is where the proposal becomes execution: choose a stack that compounds a small team, build the infrastructure, and use it ourselves first.
+-->
+
+---
+
+# Product
+
+- We went deep on Xcode internals and proprietary formats
+- That know-how became a moat
+- We made new features adoptable without generated projects, like insights
+- We lowered adoption cost so teams could try things incrementally
+- We let developers experience the product in public, not just watch demos
+- The product stopped being "a CLI" and became a platform, with the CLI as one of the interfaces
+
+<div class="talk-center-cta">
+  <a href="https://tuist.dev/tuist/tuist" target="_blank" rel="noreferrer" class="noora-button talk-center-cta__button" data-variant="primary" data-size="medium"><span>Explore Tuist's features</span></a>
+</div>
+
+<div class="talk-timeline talk-timeline--with-gray" style="--timeline-orange-fill: 10%; --timeline-green-fill: 65%; --timeline-gray-fill: 75%; --timeline-invested-fill: 82.5%;">
+  <div class="talk-timeline__labels" aria-hidden="true">
+    <span>2017</span>
+    <span>2018</span>
+    <span>2019</span>
+    <span>2020</span>
+    <span>2021</span>
+    <span>2022</span>
+    <span>2023</span>
+    <span class="is-active">2024</span>
+    <span>2025</span>
+    <span>2026</span>
+  </div>
+  <div class="talk-timeline__track">
+    <span class="talk-timeline__segment talk-timeline__segment--gray"></span>
+    <span class="talk-timeline__segment talk-timeline__segment--invested"></span>
+  </div>
+  <div class="talk-timeline__events" aria-hidden="true">
+    <span><img src="/soundcloud.svg" class="talk-timeline__logo soundcloud" alt="" /></span>
+    <span><img src="/shopify.svg" class="talk-timeline__logo shopify" alt="" /></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span><img src="/german-government.svg" class="talk-timeline__logo government" alt="" /></span>
+    <span><span class="talk-timeline__symbol invested">$</span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+---
+
+# Design
+
+<div class="talk-split-slide">
+<div>
+
+- Design craft had to match the engineering quality
+- Otherwise it would drag down perceived value
+- We built Noora (`github.com/tuist/noora`) for the Elixir server and the Swift CLI
+- Tuist could speak the same visual language everywhere
+- And we could move faster with shared design-system blocks
+
+</div>
+
+<div class="talk-split-slide__media">
+  <img src="/noora.png" alt="Noora design system" />
+</div>
+</div>
+
+<div class="talk-timeline talk-timeline--with-gray" style="--timeline-orange-fill: 10%; --timeline-green-fill: 65%; --timeline-gray-fill: 75%; --timeline-invested-fill: 82.5%;">
+  <div class="talk-timeline__labels" aria-hidden="true">
+    <span>2017</span>
+    <span>2018</span>
+    <span>2019</span>
+    <span>2020</span>
+    <span>2021</span>
+    <span>2022</span>
+    <span>2023</span>
+    <span class="is-active">2024</span>
+    <span>2025</span>
+    <span>2026</span>
+  </div>
+  <div class="talk-timeline__track">
+    <span class="talk-timeline__segment talk-timeline__segment--gray"></span>
+    <span class="talk-timeline__segment talk-timeline__segment--invested"></span>
+  </div>
+  <div class="talk-timeline__events" aria-hidden="true">
+    <span><img src="/soundcloud.svg" class="talk-timeline__logo soundcloud" alt="" /></span>
+    <span><img src="/shopify.svg" class="talk-timeline__logo shopify" alt="" /></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span><img src="/german-government.svg" class="talk-timeline__logo government" alt="" /></span>
+    <span><span class="talk-timeline__symbol invested">$</span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+---
+class: website-grid-slide
+---
+
+<div class="talk-website-grid">
+  <figure class="talk-website-grid__item">
+    <img src="/website-2018.png" alt="Tuist website in 2018" />
+    <figcaption>2018</figcaption>
+  </figure>
+  <figure class="talk-website-grid__item">
+    <img src="/website-2019.png" alt="Tuist website in 2019" />
+    <figcaption>2019</figcaption>
+  </figure>
+  <figure class="talk-website-grid__item">
+    <img src="/website-2021.png" alt="Tuist website in 2021" />
+    <figcaption>2021</figcaption>
+  </figure>
+  <figure class="talk-website-grid__item">
+    <img src="/website-2026.png" alt="Tuist website in 2026" />
+    <figcaption>2026</figcaption>
+  </figure>
+</div>
+
+---
+
+# Marketing
+
+- We explored ideas and shared what we learned
+- In a noisy market, the content had to be memorable and useful
+- That is how engineers build trust, like PSPDFKit did
+- We could not afford clickbait or brute-force ad spend
+
+<blockquote>
+  <p>Hi Tuist team,</p>
+  <p>We would like to exchange with you on the paid features of Tuist, in particular Dashboard and Remote Cache.</p>
+  <p>Over the past months, we have fully migrated the <strong>██████ iOS app</strong> to Tuist. From our perspective, this decision has clearly paid off, especially in terms of project structure, scalability, and overall developer experience.</p>
+</blockquote>
+
+<div class="talk-timeline talk-timeline--with-gray" style="--timeline-orange-fill: 10%; --timeline-green-fill: 65%; --timeline-gray-fill: 75%; --timeline-invested-fill: 82.5%;">
+  <div class="talk-timeline__labels" aria-hidden="true">
+    <span>2017</span>
+    <span>2018</span>
+    <span>2019</span>
+    <span>2020</span>
+    <span>2021</span>
+    <span>2022</span>
+    <span>2023</span>
+    <span class="is-active">2024</span>
+    <span>2025</span>
+    <span>2026</span>
+  </div>
+  <div class="talk-timeline__track">
+    <span class="talk-timeline__segment talk-timeline__segment--gray"></span>
+    <span class="talk-timeline__segment talk-timeline__segment--invested"></span>
+  </div>
+  <div class="talk-timeline__events" aria-hidden="true">
+    <span><img src="/soundcloud.svg" class="talk-timeline__logo soundcloud" alt="" /></span>
+    <span><img src="/shopify.svg" class="talk-timeline__logo shopify" alt="" /></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span><img src="/german-government.svg" class="talk-timeline__logo government" alt="" /></span>
+    <span><span class="talk-timeline__symbol invested">$</span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+---
+
+# Sales
+
+- Developers pay with ideas, bug reports, contributions, and word of mouth. Employers pay with money
+- We built a system to keep conversations warm while supporting adoption
+- Some parts stayed slow: security reviews, procurement, and legal
+- New systems like Gradle lowered adoption cost dramatically, it was just a plugin
+- Adoption often started with one developer and ended in procurement
+
+<div class="talk-terminal-window" style="width: min(100%, 32rem); margin-top: var(--noora-spacing-6);">
+  <div data-part="bar">
+    <span data-part="language">Gradle</span>
+  </div>
+  <div data-part="code">
+    <pre><code>plugins {
+  id("dev.tuist")
+  version "0.1.0"
+}</code></pre>
+  </div>
+</div>
+
+<div class="talk-timeline talk-timeline--with-gray" style="--timeline-orange-fill: 10%; --timeline-green-fill: 65%; --timeline-gray-fill: 75%; --timeline-invested-fill: 82.5%;">
+  <div class="talk-timeline__labels" aria-hidden="true">
+    <span>2017</span>
+    <span>2018</span>
+    <span>2019</span>
+    <span>2020</span>
+    <span>2021</span>
+    <span>2022</span>
+    <span>2023</span>
+    <span class="is-active">2024</span>
+    <span>2025</span>
+    <span>2026</span>
+  </div>
+  <div class="talk-timeline__track">
+    <span class="talk-timeline__segment talk-timeline__segment--gray"></span>
+    <span class="talk-timeline__segment talk-timeline__segment--invested"></span>
+  </div>
+  <div class="talk-timeline__events" aria-hidden="true">
+    <span><img src="/soundcloud.svg" class="talk-timeline__logo soundcloud" alt="" /></span>
+    <span><img src="/shopify.svg" class="talk-timeline__logo shopify" alt="" /></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span><img src="/german-government.svg" class="talk-timeline__logo government" alt="" /></span>
+    <span><span class="talk-timeline__symbol invested">$</span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+
+---
+layout: section
+class: section-glow
+---
+
+<iframe src="/tuist-glow-shader.html" class="section-shader"></iframe>
+
+<div class="talk-section-heading">
+  <span class="noora-badge talk-section-heading__part" data-size="large" data-style="light-fill" data-color="neutral">Part five</span>
+  <h1 class="talk-section-heading__title">AI happened</h1>
+</div>
 
 <!--
 This is where many developers get stuck. They think there is one "real" business model. There isn't.
 -->
 
 ---
-
-# Business models for developer tools
-
-| Model | Good when | Trap |
-|-------|-----------|------|
-| **Paid app / subscription** | You solve an end-user problem | High churn pressure |
-| **Consulting / productized service** | You already have demand and trust | You can become the bottleneck |
-| **Courses / education** | Your expertise is teachable | You may build an audience business, not a product |
-| **Open core** | Free adoption feeds paid upgrades | Feature-gating can create resentment |
-| **Hosted / managed OSS** | Running it well is hard and valuable | Infra and support become the product |
-
-<!--
-The right model depends on what you want your day-to-day work to feel like.
--->
-
+class: quote-bottom
 ---
 
-# What Tuist chose
+# Inference getting faster pulls us into the stack
 
-- Free for indies and small startups
-- Paid for large companies that need guarantees
-- Value capture moved toward **infrastructure and accountability**
-- The more value shifts to infra, the more client-side code we can open up
+- Faster inference makes slow workflows feel broken.
+- More and faster compute helps, but it is expensive and capped.
+- We invested in the depth of build systems, where CI and compute companies often would not.
+- That depth is becoming more valuable as agents need to know **what to build, test, and skip**.
 
-Indies pay us in a different currency too:
-
-<ul class="talk-signal-list">
-  <li>🐞 Bug reports</li>
-  <li>💡 Feature requests</li>
-  <li>🎤 Talks at conferences</li>
-  <li>📣 Word of mouth</li>
-  <li>🤝 Contributions</li>
-</ul>
-
-<!--
-This is the model that fits us. It would be wrong for many products, which is exactly the point.
--->
-
----
-
-<div style="max-width: 55%;">
-
-# Pick the model that matches your constraints
-
-Find the intersection of:
-
-- **What you enjoy doing**
-- **Who feels the pain enough to pay**
-- **What they cannot easily reproduce themselves**
-
-If you're building in public or in open source, add one more:
-
-**How do I capture value without breaking trust?**
-
-Not every good business needs to become a franchise.
-
+<div class="talk-openai-quote">
+  <p class="talk-openai-quote__text">"If it's 'oh god, I don't want to do this' and 'oh my god, this is hard,' that's a good spot to be in."</p>
+  <div class="talk-openai-quote__meta">
+    <div class="talk-openai-quote__source">
+      <img src="/openai-logomark.svg" alt="OpenAI logo" class="talk-openai-quote__logo" />
+      <span class="talk-openai-quote__cite">Peter Steinberger</span>
+    </div>
+    <a href="https://www.youtube.com/watch?v=8lF7HmQ_RgY" class="talk-openai-quote__link">The creator of Clawd: "I ship code I don't read"</a>
+  </div>
 </div>
 
-<!-- TODO: Add drawing as /pick-model.png and uncomment -->
-<!-- <img src="/pick-model.png" class="slide-right-img" /> -->
-
 <!--
-That last question matters a lot for developer audiences. Trust compounds slowly and is easy to destroy.
+As models get faster, the bottleneck becomes the software delivery system around them. We ended up investing in deep build-system knowledge that many CI and compute companies historically treated as too costly. That depth is now becoming strategically relevant because agents need guidance, selectivity, and confidence.
 -->
 
 ---
-layout: section
-class: section-glow
+class: timeline-slide
 ---
 
-<iframe src="/tuist-glow-shader.html" class="section-shader"></iframe>
-
-# 5. Selling to developers
-
-<!--
-Your users are developers. Your go-to-market motion is weird in a very specific way.
--->
-
----
-class: pizza-bottom
----
-
-# Selling to developers is hard
-
-- Cold outreach usually underperforms
-- Flashy marketing rarely beats credibility
-- "Book a demo" is a weak first touch
-- Developers want to **discover, verify, and trust** a tool on their own
-
-They are difficult customers. They are also your best distribution channel.
-
-<blockquote class="talk-pizza-callout">
-  <p>🍕 Developer tools spread more like trusted restaurant recommendations than ad campaigns.</p>
-</blockquote>
-
-<!--
-Developers are skeptical, but in a healthy way. If they trust the tool, they will tell everyone.
--->
-
----
-
-# What actually created inbound for us
-
-- Shipping useful open source work consistently
-- Writing docs and migration guides
-- Speaking at conferences like this one
-- Publishing blog posts around painful transitions
-- Responding quickly when new Xcode releases broke people
-
-Every artifact taught the market: **"When this hurts, Tuist is one place to look."**
-
-> A great product is necessary, but not sufficient. Positioning, distribution, sales, pricing: treat them as skills to learn, not chores to avoid.
-
-<!--
-This is the practical GTM slide. No magic funnel. Just repeated acts of usefulness that build recall.
--->
-
----
-layout: section
-class: section-glow
----
-
-<iframe src="/tuist-glow-shader.html" class="section-shader"></iframe>
-
-# 6. Small is a feature
-
-<!--
-One of the best parts of staying small is that speed itself becomes part of the product.
--->
-
----
-
-# AI makes small teams dangerous
+# AI made us more productive
 
 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--noora-spacing-8); align-items: center;">
 <div>
 
-We dog-food our own tools, so we're motivated to optimize developer workflows. AI agents let us ship more with fewer people.
+We dog-food our own tools, so we're motivated to optimize developer workflows. AI agents let us ship faster with the same team.
 
-AI does **not** replace taste, trust, or customer understanding. But it multiplies everything else.
+- A concrete example: we rolled out Gradle support in **3 weeks**
+- We ship without committees and stay close to customers
+- AI does **not** replace taste, trust, or customer understanding. It multiplies everything else.
 
 </div>
 <div>
@@ -531,47 +1219,39 @@ AI does **not** replace taste, trust, or customer understanding. But it multipli
 </div>
 </div>
 
-<!--
-The commit chart shows our velocity increasing dramatically. AI is a real force multiplier for small teams.
--->
-
----
-
-# Your size is an advantage
-
-We rolled out our full feature set for Gradle support in **3 weeks**. A larger company would spend that time in planning meetings.
-
-- Ship without committees
-- Change direction quickly
-- Stay close to customers
-- Go deep on narrow, weird problems
-
-Big companies have distribution. They also have bureaucracy and the innovator's dilemma. Use that.
-
-<!--
-If you're indie, you should not try to look big. You should exploit the advantages of being small.
--->
-
----
-class: pizza-bottom
----
-
-# You do not need a hot market
-
-- Capital chases obvious categories
-- Developers often find value in neglected corners
-- A small painful niche can be enough
-- Depth beats breadth when trust matters
-
-For us, that meant going deeper into build systems instead of wider into adjacent markets.
-
-<blockquote class="talk-pizza-callout">
-  <p>🍕 You do not need to feed the whole city.</p>
-  <p>You need the right table to come back again and again.</p>
-</blockquote>
+<div class="talk-timeline talk-timeline--with-gray" style="--timeline-orange-fill: 10%; --timeline-green-fill: 65%; --timeline-gray-fill: 75%; --timeline-invested-fill: 82.5%;">
+  <div class="talk-timeline__labels" aria-hidden="true">
+    <span>2017</span>
+    <span>2018</span>
+    <span>2019</span>
+    <span>2020</span>
+    <span>2021</span>
+    <span>2022</span>
+    <span>2023</span>
+    <span>2024</span>
+    <span class="is-active">2025</span>
+    <span>2026</span>
+  </div>
+  <div class="talk-timeline__track">
+    <span class="talk-timeline__segment talk-timeline__segment--gray"></span>
+    <span class="talk-timeline__segment talk-timeline__segment--invested"></span>
+  </div>
+  <div class="talk-timeline__events" aria-hidden="true">
+    <span><img src="/soundcloud.svg" class="talk-timeline__logo soundcloud" alt="" /></span>
+    <span><img src="/shopify.svg" class="talk-timeline__logo shopify" alt="" /></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span><img src="/german-government.svg" class="talk-timeline__logo government" alt="" /></span>
+    <span><span class="talk-timeline__symbol invested">$</span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
 
 <!--
-This is encouraging for indie builders because it means you do not need to win the trend cycle to win a real business.
+The commit chart shows our velocity increasing dramatically. AI has been a real force multiplier for us. One concrete example is that we rolled out Gradle support in three weeks.
 -->
 
 ---
@@ -581,53 +1261,204 @@ class: section-glow
 
 <iframe src="/tuist-glow-shader.html" class="section-shader"></iframe>
 
-# 7. Protect what compounds
+<div class="talk-section-heading">
+  <span class="noora-badge talk-section-heading__part" data-size="large" data-style="light-fill" data-color="neutral">Part six</span>
+  <h1 class="talk-section-heading__title">Today</h1>
+</div>
+
+---
+class: timeline-slide
+---
+
+# The business is working
+
+- Binary and action cache, build/test/bundle insights, test flakiness detection and sharding, MCP and REST APIs
+- We are close to profitability
+- Inbound from organizations keeps building momentum
+- We'll grow the team soon
+- We now have 3 big challenges ahead
+
+<div class="talk-timeline talk-timeline--with-gray" style="--timeline-orange-fill: 10%; --timeline-green-fill: 65%; --timeline-gray-fill: 75%; --timeline-invested-fill: 100%;">
+  <div class="talk-timeline__labels" aria-hidden="true">
+    <span>2017</span>
+    <span>2018</span>
+    <span>2019</span>
+    <span>2020</span>
+    <span>2021</span>
+    <span>2022</span>
+    <span>2023</span>
+    <span>2024</span>
+    <span>2025</span>
+    <span class="is-active">2026</span>
+  </div>
+  <div class="talk-timeline__track">
+    <span class="talk-timeline__segment talk-timeline__segment--gray"></span>
+    <span class="talk-timeline__segment talk-timeline__segment--invested"></span>
+  </div>
+  <div class="talk-timeline__events" aria-hidden="true">
+    <span><img src="/soundcloud.svg" class="talk-timeline__logo soundcloud" alt="" /></span>
+    <span><img src="/shopify.svg" class="talk-timeline__logo shopify" alt="" /></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span><img src="/german-government.svg" class="talk-timeline__logo government" alt="" /></span>
+    <span><span class="talk-timeline__symbol invested">$</span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
 
 <!--
-When your code is public or your audience is technical, your durable assets tend to live outside the repository.
+Momentum is finally visible in the business, not just the product. We are close to profitability, more organizations are finding us inbound, and that gives us room to grow the team. The next chapter is not survival, it is executing well against the three big challenges ahead.
 -->
 
 ---
+class: timeline-slide
+---
 
-<div style="max-width: 55%;">
+# #1 Scale our cache infrastructure
 
-# Assets small teams can compound
+<div class="talk-split-slide talk-split-slide--globe">
+<div>
 
-1. **Code** (everyone starts here)
-2. **Infrastructure expertise** (you know how to run it well)
-3. **Reputation** (people associate you with the problem)
-4. **Community trust** (people vouch for you unprompted)
-5. **Word of mouth** (it scales without you)
-
-Each layer is harder to build and harder to copy.
+- We are building infrastructure that is fast, low-latency, and global by default
+- It has to speed up workflows from developer laptops, CI, and agentic environments
+- It also has to work in a multi-tenant setup with a fair distribution of resources
 
 </div>
 
-<!-- TODO: Add pyramid drawing as /compound-assets.png and uncomment -->
-<!-- <img src="/compound-assets.png" class="slide-right-img" /> -->
+<div class="talk-split-slide__media">
+  <div class="talk-globe-frame">
+    <iframe src="/cobe-infrastructure-globe.html" class="talk-globe-frame__embed" title="Global low-latency infrastructure globe"></iframe>
+  </div>
+</div>
+</div>
+
+<div class="talk-timeline talk-timeline--with-gray" style="--timeline-orange-fill: 10%; --timeline-green-fill: 65%; --timeline-gray-fill: 75%; --timeline-invested-fill: 100%;">
+  <div class="talk-timeline__labels" aria-hidden="true">
+    <span>2017</span>
+    <span>2018</span>
+    <span>2019</span>
+    <span>2020</span>
+    <span>2021</span>
+    <span>2022</span>
+    <span>2023</span>
+    <span>2024</span>
+    <span>2025</span>
+    <span class="is-active">2026</span>
+  </div>
+  <div class="talk-timeline__track">
+    <span class="talk-timeline__segment talk-timeline__segment--gray"></span>
+    <span class="talk-timeline__segment talk-timeline__segment--invested"></span>
+  </div>
+  <div class="talk-timeline__events" aria-hidden="true">
+    <span><img src="/soundcloud.svg" class="talk-timeline__logo soundcloud" alt="" /></span>
+    <span><img src="/shopify.svg" class="talk-timeline__logo shopify" alt="" /></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span><img src="/german-government.svg" class="talk-timeline__logo government" alt="" /></span>
+    <span><span class="talk-timeline__symbol invested">$</span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
 
 <!--
-This is the softer version of the moat argument. It lands better for technical audiences because it feels earned, not defensive.
+This is one of the hard problems ahead. If developers, CI, and agents are all producing software continuously, then latency stops being a minor annoyance and becomes a product problem. The infrastructure has to be global so workflows stay fast wherever execution starts.
 -->
 
 ---
-class: pizza-bottom
+class: timeline-slide
 ---
 
-# Brand compounds in unexpected places
+# #2 Bring compute capabilities
 
-- Tuist grew organically in South Korea
-- Local developers gave talks and translated the docs
-- We closed our first customer there without a single sales call
+- Compete with CI providers that co-locate cache but don't distribute
+- Enable agentic workflows that act on your project data
+- Sandboxing is solved; managing it at scale is the challenge
 
-**That trust takes years to build. Do not trade it away cheaply.**
-
-<blockquote class="talk-pizza-callout">
-  <p>🍕 It's what makes someone say: "If we're in Chicago, that's the place."</p>
-</blockquote>
+<div class="talk-timeline talk-timeline--with-gray" style="--timeline-orange-fill: 10%; --timeline-green-fill: 65%; --timeline-gray-fill: 75%; --timeline-invested-fill: 100%;">
+  <div class="talk-timeline__labels" aria-hidden="true">
+    <span>2017</span>
+    <span>2018</span>
+    <span>2019</span>
+    <span>2020</span>
+    <span>2021</span>
+    <span>2022</span>
+    <span>2023</span>
+    <span>2024</span>
+    <span>2025</span>
+    <span class="is-active">2026</span>
+  </div>
+  <div class="talk-timeline__track">
+    <span class="talk-timeline__segment talk-timeline__segment--gray"></span>
+    <span class="talk-timeline__segment talk-timeline__segment--invested"></span>
+  </div>
+  <div class="talk-timeline__events" aria-hidden="true">
+    <span><img src="/soundcloud.svg" class="talk-timeline__logo soundcloud" alt="" /></span>
+    <span><img src="/shopify.svg" class="talk-timeline__logo shopify" alt="" /></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span><img src="/german-government.svg" class="talk-timeline__logo government" alt="" /></span>
+    <span><span class="talk-timeline__symbol invested">$</span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
 
 <!--
-Brand in this context is not logos and gradients. It is accumulated trust that travels further than you expect.
+Compute is the natural next step. CI providers co-locate cache with build machines, which is fast but not distributed. We can flip that: distributed cache first, then bring compute to the edge. Agentic workflows — like automated test analysis or code suggestions — need access to project data, and that means running code in sandboxed environments we control.
+-->
+
+---
+class: timeline-slide
+---
+
+# #3 GTM for new ecosystems
+
+- Plugging our infrastructure into new ecosystems is low-cost thanks to AI
+- Bazel is next; long-term we plan to integrate with every build system (<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" style="display:inline;height:1.2em;vertical-align:middle"><path fill="#76d275" d="m32 0 32 32-32 32L0 32Z"/><path fill="#43a047" d="M0 32v32l32 32V64Z"/><path fill="#76d275" d="m96 0 32 32-32 32-32-32Z"/><path fill="#43a047" d="M128 32v32L96 96V64Zm-64 0 32 32-32 32-32-32Z"/><path fill="#00701a" d="M64 96v32L32 96V64Z"/><path fill="#004300" d="m64 96 32-32v32l-32 32Z"/></svg>, <img src="/rust.svg" style="display:inline;height:1.2em;vertical-align:middle" />, <img src="/go.svg" style="display:inline;height:1.2em;vertical-align:middle" />, <img src="/elixir.svg" style="display:inline;height:1.2em;vertical-align:middle" />)
+- GTM is still too costly with too much noise
+- Betting on video-based storytelling (limited resources breed creativity)
+
+<div class="talk-timeline talk-timeline--with-gray" style="--timeline-orange-fill: 10%; --timeline-green-fill: 65%; --timeline-gray-fill: 75%; --timeline-invested-fill: 100%;">
+  <div class="talk-timeline__labels" aria-hidden="true">
+    <span>2017</span>
+    <span>2018</span>
+    <span>2019</span>
+    <span>2020</span>
+    <span>2021</span>
+    <span>2022</span>
+    <span>2023</span>
+    <span>2024</span>
+    <span>2025</span>
+    <span class="is-active">2026</span>
+  </div>
+  <div class="talk-timeline__track">
+    <span class="talk-timeline__segment talk-timeline__segment--gray"></span>
+    <span class="talk-timeline__segment talk-timeline__segment--invested"></span>
+  </div>
+  <div class="talk-timeline__events" aria-hidden="true">
+    <span><img src="/soundcloud.svg" class="talk-timeline__logo soundcloud" alt="" /></span>
+    <span><img src="/shopify.svg" class="talk-timeline__logo shopify" alt="" /></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span><img src="/german-government.svg" class="talk-timeline__logo government" alt="" /></span>
+    <span><span class="talk-timeline__symbol invested">$</span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<!--
+Expanding to new ecosystems is technically cheap now — AI helps us build integrations fast. But reaching developers in those ecosystems is expensive and noisy. We're leaning into video storytelling as our GTM lever because it lets a small team punch above its weight.
 -->
 
 ---
@@ -637,38 +1468,43 @@ class: section-glow
 
 <iframe src="/tuist-glow-shader.html" class="section-shader"></iframe>
 
-# 8. Looking back, looking forward
+<div class="talk-section-heading">
+  <span class="noora-badge talk-section-heading__part" data-size="large" data-style="light-fill" data-color="neutral">Part seven</span>
+  <h1 class="talk-section-heading__title">Wrap up</h1>
+</div>
 
 <!--
-Honest reflections after years of building Tuist.
+Let's wrap up with the key takeaways from this journey.
 -->
 
 ---
 
-# What we'd do differently
+# Looking back, looking forward
 
-- **Think about the business earlier.** We spent years building in the open without considering how to sustain it. The product was great, but "great" doesn't pay rent
-- **Be ready for competition.** Once you enter business territory, companies that used your open-source work for brand recognition can pivot to compete against you. It happens
-- **Charge earlier than feels comfortable.** The discomfort of asking for money fades. The cost of running out of runway doesn't
+- **Compound your assets.** Code, expertise, reputation, trust, word of mouth. Each layer is harder to build and harder to copy
+- **Brand travels further than you think.** Tuist grew organically in South Korea 🇰🇷. Local devs gave talks, translated docs, and we closed our first customer there without a single sales call
+- **Think about the business earlier.** "Great" doesn't pay rent
+- **Be ready for competition.** Companies that used your OSS for brand recognition can pivot to compete against you
+- **Charge earlier than feels comfortable.** The discomfort of asking for money fades. Running out of runway doesn't
 
 <!--
-This is the honest slide. Not regrets, just things I see more clearly now.
+Honest reflections after years of building. These are not regrets — just things we see more clearly now. Trust compounds but takes years. Do not trade it away cheaply.
 -->
 
 ---
+layout: section
+class: section-glow
+---
 
-# Monday morning checklist
+<iframe src="/tuist-glow-shader.html" class="section-shader"></iframe>
 
-1. List three recurring pains you know firsthand
-2. Pick the one that happens often and expensively
-3. Talk to five people who have it
-4. Build the smallest thing that removes real pain
-5. Ask for money before polishing the brand story
-
-**You do not need permission. You need evidence.**
+<div class="talk-section-heading">
+  <span class="noora-badge talk-section-heading__part" data-size="large" data-style="light-fill" data-color="neutral">Most importantly</span>
+  <h1 class="talk-section-heading__title">Be yourself</h1>
+</div>
 
 <!--
-If someone leaves with one actionable slide, I want it to be this one.
+Authenticity is the one thing no competitor can copy. Stay true to who you are and why you started.
 -->
 
 ---

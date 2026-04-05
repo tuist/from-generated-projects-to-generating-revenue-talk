@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Global Infrastructure Globe</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: transparent;
+    font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+  body {
+    width: 100%;
+    height: 100%;
+  }
+  .wrap {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    cursor: grab;
+  }
+  .wrap.is-dragging { cursor: grabbing; }
+  canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: transparent;
+  }
+  .cache-node {
+    position: absolute;
+    top: anchor(center);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.88);
+    box-shadow: 0 8px 30px rgba(123, 97, 255, 0.12);
+    color: #1f2937;
+    padding: 0.28rem 0.5rem 0.28rem 0.35rem;
+    white-space: nowrap;
+    pointer-events: none;
+    transition: opacity 180ms ease, filter 180ms ease;
+  }
+  .cache-node--to-right {
+    left: anchor(right);
+    translate: var(--shift-x, 0px) calc(-50% + var(--shift-y, 0px));
+  }
+  .cache-node--to-left {
+    left: anchor(left);
+    translate: calc(-100% + var(--shift-x, 0px)) calc(-50% + var(--shift-y, 0px));
+  }
+  .cache-node__logo {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.45rem;
+    height: 1.45rem;
+    border-radius: 999px;
+    background: #ffffff;
+    box-shadow: inset 0 0 0 1px rgba(123, 97, 255, 0.18);
+    flex: 0 0 auto;
+  }
+  .cache-node__logo img {
+    width: 0.9rem;
+    height: 0.9rem;
+    display: block;
+  }
+  .cache-node__label {
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <canvas id="globe"></canvas>
+    <div class="cache-node cache-node--to-left" style="position-anchor: --cobe-cache-hillsboro; opacity: var(--cobe-visible-cache-hillsboro, 0); filter: blur(calc((1 - var(--cobe-visible-cache-hillsboro, 0)) * 8px)); --shift-x: -0.35rem; --shift-y: -1.7rem;">
+      <span class="cache-node__logo"><img src="/brand-tuist.svg" alt="" /></span>
+      <span class="cache-node__label">us-west</span>
+    </div>
+    <div class="cache-node cache-node--to-left" style="position-anchor: --cobe-cache-chicago; opacity: var(--cobe-visible-cache-chicago, 0); filter: blur(calc((1 - var(--cobe-visible-cache-chicago, 0)) * 8px)); --shift-x: -0.35rem; --shift-y: 0.1rem;">
+      <span class="cache-node__logo"><img src="/brand-tuist.svg" alt="" /></span>
+      <span class="cache-node__label">us-central</span>
+    </div>
+    <div class="cache-node cache-node--to-left" style="position-anchor: --cobe-cache-ashburn; opacity: var(--cobe-visible-cache-ashburn, 0); filter: blur(calc((1 - var(--cobe-visible-cache-ashburn, 0)) * 8px)); --shift-x: -0.35rem; --shift-y: -3rem;">
+      <span class="cache-node__logo"><img src="/brand-tuist.svg" alt="" /></span>
+      <span class="cache-node__label">us-east</span>
+    </div>
+    <div class="cache-node cache-node--to-left" style="position-anchor: --cobe-cache-santiago; opacity: var(--cobe-visible-cache-santiago, 0); filter: blur(calc((1 - var(--cobe-visible-cache-santiago, 0)) * 8px)); --shift-x: -0.35rem; --shift-y: 2rem;">
+      <span class="cache-node__logo"><img src="/brand-tuist.svg" alt="" /></span>
+      <span class="cache-node__label">sa-west</span>
+    </div>
+    <div class="cache-node cache-node--to-left" style="position-anchor: --cobe-cache-falkenstein; opacity: var(--cobe-visible-cache-falkenstein, 0); filter: blur(calc((1 - var(--cobe-visible-cache-falkenstein, 0)) * 8px)); --shift-x: -0.35rem; --shift-y: -2.7rem;">
+      <span class="cache-node__logo"><img src="/brand-tuist.svg" alt="" /></span>
+      <span class="cache-node__label">eu-central</span>
+    </div>
+    <div class="cache-node cache-node--to-left" style="position-anchor: --cobe-cache-helsinki; opacity: var(--cobe-visible-cache-helsinki, 0); filter: blur(calc((1 - var(--cobe-visible-cache-helsinki, 0)) * 8px)); --shift-x: -0.35rem; --shift-y: -0.4rem;">
+      <span class="cache-node__logo"><img src="/brand-tuist.svg" alt="" /></span>
+      <span class="cache-node__label">eu-north</span>
+    </div>
+    <div class="cache-node cache-node--to-left" style="position-anchor: --cobe-cache-singapore; opacity: var(--cobe-visible-cache-singapore, 0); filter: blur(calc((1 - var(--cobe-visible-cache-singapore, 0)) * 8px)); --shift-x: -0.35rem; --shift-y: 1.2rem;">
+      <span class="cache-node__logo"><img src="/brand-tuist.svg" alt="" /></span>
+      <span class="cache-node__label">ap-southeast</span>
+    </div>
+    <div class="cache-node cache-node--to-left" style="position-anchor: --cobe-cache-sydney; opacity: var(--cobe-visible-cache-sydney, 0); filter: blur(calc((1 - var(--cobe-visible-cache-sydney, 0)) * 8px)); --shift-x: -0.35rem; --shift-y: 1.8rem;">
+      <span class="cache-node__logo"><img src="/brand-tuist.svg" alt="" /></span>
+      <span class="cache-node__label">au-east</span>
+    </div>
+  </div>
+
+  <script type="module">
+    import createGlobe from 'https://cdn.jsdelivr.net/npm/cobe@2.0.1/+esm';
+
+    const canvas = document.getElementById('globe');
+    let dimensions = { width: 0, height: 0 };
+    let phi = 0;
+    let theta = 0.32;
+    let animationId = 0;
+    let pointerInteracting = null;
+    let dragOffset = { phi: 0, theta: 0 };
+
+    const markers = [
+      { id: 'cache-hillsboro', location: [45.5229, -122.9898], size: 0.001 },
+      { id: 'cache-chicago', location: [41.8781, -87.6298], size: 0.001 },
+      { id: 'cache-ashburn', location: [39.0438, -77.4874], size: 0.001 },
+      { id: 'cache-santiago', location: [-33.4489, -70.6693], size: 0.001 },
+      { id: 'cache-falkenstein', location: [50.4777, 12.3649], size: 0.001 },
+      { id: 'cache-helsinki', location: [60.1699, 24.9384], size: 0.001 },
+      { id: 'cache-singapore', location: [1.3521, 103.8198], size: 0.001 },
+      { id: 'cache-sydney', location: [-33.8688, 151.2093], size: 0.001 },
+    ];
+
+    const arcs = [];
+
+    function getDimensions() {
+      const rect = canvas.getBoundingClientRect();
+      return {
+        width: Math.max(320, rect.width),
+        height: Math.max(320, rect.height),
+      };
+    }
+
+    dimensions = getDimensions();
+
+    const globe = createGlobe(canvas, {
+      devicePixelRatio: 2,
+      width: dimensions.width * 2,
+      height: dimensions.height * 2,
+      phi: 0,
+      theta: theta,
+      dark: 0,
+      diffuse: 1.1,
+      mapSamples: 20000,
+      mapBrightness: 5.5,
+      mapBaseBrightness: 0.02,
+      baseColor: [0.97, 0.96, 1],
+      glowColor: [0.78, 0.72, 1],
+      markerColor: [1, 1, 1],
+      arcColor: [0.54, 0.45, 1],
+      arcWidth: 0.55,
+      arcHeight: 0.18,
+      markerElevation: 0.04,
+      offset: [0, 0],
+      scale: 0.45,
+      markers,
+      arcs,
+      opacity: 1,
+      context: { alpha: true },
+    });
+
+    function onResize() {
+      dimensions = getDimensions();
+      globe.update({
+        width: dimensions.width * 2,
+        height: dimensions.height * 2,
+        offset: [0, 0],
+      });
+    }
+
+    const wrap = canvas.parentElement;
+
+    function onPointerDown(event) {
+      pointerInteracting = { x: event.clientX, y: event.clientY };
+      wrap.classList.add('is-dragging');
+    }
+
+    function onPointerMove(event) {
+      if (pointerInteracting === null) return;
+      const deltaX = event.clientX - pointerInteracting.x;
+      const deltaY = event.clientY - pointerInteracting.y;
+      dragOffset = {
+        phi: deltaX / 150,
+        theta: deltaY / 300,
+      };
+    }
+
+    function onPointerUp() {
+      if (pointerInteracting !== null) {
+        phi += dragOffset.phi;
+        theta += dragOffset.theta;
+        dragOffset = { phi: 0, theta: 0 };
+      }
+      pointerInteracting = null;
+      wrap.classList.remove('is-dragging');
+    }
+
+    function animate() {
+      phi += 0.003;
+      globe.update({
+        phi: phi + dragOffset.phi,
+        theta: theta + dragOffset.theta,
+        width: dimensions.width * 2,
+        height: dimensions.height * 2,
+        offset: [0, 0],
+      });
+      animationId = requestAnimationFrame(animate);
+    }
+
+    window.addEventListener('resize', onResize);
+    wrap.addEventListener('pointerdown', onPointerDown);
+    window.addEventListener('pointermove', onPointerMove);
+    window.addEventListener('pointerup', onPointerUp);
+    window.addEventListener('pointercancel', onPointerUp);
+    animate();
+  </script>
+</body>
+</html>
