@@ -21,21 +21,16 @@ keywords: tuist,open-source,business,swift,indie
   </div>
 </div>
 
-<!--
-This talk is for Swift developers who have built something on nights and weekends and wondered whether it could become more than a hobby.
--->
 
 ---
 
 # About me
 
-- Building Tuist since 2017
+- From the southeast of Spain, building Tuist from Berlin
+- Doing open source since I can remember
 - Previously at SoundCloud, Shopify, and other companies
 - Now full-time CEO and co-founder of Tuist
 
-<!--
-Quick intro. I've spent most of my career as a Swift developer. Tuist started as a tool I needed, not as a startup idea.
--->
 
 ---
 
@@ -58,9 +53,6 @@ Quick intro. I've spent most of my career as a Swift developer. Tuist started as
 
 <img src="/what-is-tuist.png" class="slide-right-img" />
 
-<!--
-For anyone who does not know Tuist, this is the short version. The important part for this talk is not the product surface area. It's the path from painful tool to sustainable business.
--->
 
 ---
 class: slide-with-bg
@@ -75,9 +67,6 @@ class: slide-with-bg
 - 2026: still a small team, now with paying customers
 - You likely have a side project quietly baking already
 
-<!--
-I'm not here to say everyone should build a venture-backed company. I'm here to show that a painful developer problem can turn into something sustainable.
--->
 
 ---
 layout: section
@@ -91,9 +80,6 @@ class: section-glow
   <h1 class="talk-section-heading__title">A hobby</h1>
 </div>
 
-<!--
-Most good indie projects do not start with market research. They start with irritation.
--->
 
 ---
 class: timeline-slide
@@ -138,9 +124,6 @@ class: timeline-slide
   </div>
 </div>
 
-<!--
-This was not visionary. It was practical. I had pain, I built a fix, and other people had the same pain.
--->
 
 ---
 class: pizza-bottom timeline-slide wide-title
@@ -192,9 +175,6 @@ class: pizza-bottom timeline-slide wide-title
   </div>
 </div>
 
-<!--
-This was an important signal in retrospect. Tuist was valuable enough to shape my career, and even led me to meet Marek, who later became my co-founder, but not yet something I could dedicate myself to full-time. The load was growing, contributors were showing up, and the center of gravity was clearly the CLI and project generation. It was still survivable on nights and weekends.
--->
 
 ---
 class: pizza-bottom timeline-slide wide-title
@@ -211,10 +191,6 @@ Software is cheap to copy. It is **not** cheap to maintain.
 
 See also: [Why We Can't Have Nice Software](https://andrewkelley.me/post/why-we-cant-have-nice-software.html). Software wants to be *finished*, but sustaining it never is.
 
-<blockquote class="talk-pizza-callout">
-  <p>🍕 Offering a slice is easy.</p>
-  <p>Running the kitchen every night is the expensive part.</p>
-</blockquote>
 
 <div class="talk-timeline" style="--timeline-orange-fill: 10%; --timeline-green-fill: 40%;">
   <div class="talk-timeline__labels" aria-hidden="true">
@@ -244,9 +220,6 @@ See also: [Why We Can't Have Nice Software](https://andrewkelley.me/post/why-we-
   </div>
 </div>
 
-<!--
-Distribution is almost free. Maintenance is not. That's the cost open source maintainers feel first. Andrew Kelley's post makes a related point: software naturally tends toward completion, but the work of maintaining it is perpetual.
--->
 
 ---
 class: pizza-bottom timeline-slide wide-title
@@ -289,9 +262,6 @@ It had taken years and a lot of human capital to build:
   </div>
 </div>
 
-<!--
-By then, this was no longer just a side project repository. It was accumulated trust, accumulated know-how, and accumulated usage. That made the question less "should we keep doing this?" and more "how do we sustain something people already depend on?"
--->
 
 ---
 class: pizza-bottom timeline-slide wide-title
@@ -299,7 +269,7 @@ class: pizza-bottom timeline-slide wide-title
 
 # Donations felt like the obvious answer
 
-That made Tuist a valuable asset for established companies that couldn't figure out GTM around developer tools.
+As Tuist grew, companies approached us about sponsorship deals. It felt like the easy path.
 
 - We felt a gravitational pull toward a donation or sponsorship model
 - It pairs nicely with low confidence in your ability to build a business
@@ -344,9 +314,6 @@ That made Tuist a valuable asset for established companies that couldn't figure 
   </div>
 </div>
 
-<!--
-Once Tuist was clearly valuable, the easiest path to imagine was sponsorship. Established companies know how to justify donations and brand support internally. That path is seductive because it avoids the harder question of what the real product and value exchange should be. But it usually means they capture far more value than you do.
--->
 
 ---
 layout: section
@@ -360,9 +327,6 @@ class: section-glow
   <h1 class="talk-section-heading__title">It can be a business</h1>
 </div>
 
-<!--
-The transition from side project to business rarely happens in one dramatic moment. It usually looks like accumulating signals.
--->
 
 ---
 class: pizza-bottom timeline-slide wide-title
@@ -403,9 +367,6 @@ class: pizza-bottom timeline-slide wide-title
   </div>
 </div>
 
-<!--
-At that point, the status quo no longer felt stable. We had already learned that donations were not a real answer, and doing nothing meant either letting Tuist decay or letting it consume more and more of our lives. The problem was that acting on that insight meant stepping into a kind of uncertainty we didn't yet feel prepared for.
--->
 
 ---
 class: full-bleed-image
@@ -483,9 +444,6 @@ By 2023, it was no longer a side project.
   </div>
 </div>
 
-<!--
-This is the point where the story becomes deliberate. The slide should feel like a decision, not a framework.
--->
 
 ---
 class: pizza-bottom timeline-slide wide-title
@@ -530,9 +488,6 @@ We needed a business model for companies building apps with Xcode at scale.
   </div>
 </div>
 
-<!--
-This is the business filter: not abstract strategy, but the constraints that shaped what we could credibly sell.
--->
 
 ---
 class: pizza-bottom timeline-slide wide-title
@@ -582,9 +537,6 @@ We wanted to stay open, but we also needed time to move value capture toward inf
   </div>
 </div>
 
-<!--
-This was not ideological. It was a temporary way to stay open-minded about the long-term model while protecting enough value to survive the first year.
--->
 
 ---
 class: pizza-bottom timeline-slide wide-title
@@ -629,9 +581,6 @@ Because open source lets you capture less per user, but from a much larger marke
   </div>
 </div>
 
-<!--
-This is the core tradeoff: capture less per user, but create more value through reach, trust, and contributions.
--->
 
 ---
 class: pizza-bottom timeline-slide wide-title
@@ -676,9 +625,6 @@ We had already closed some enterprise customers. The problem was time.
   </div>
 </div>
 
-<!--
-This is the bridge into fundraising: demand existed, but enterprise sales alone were too slow to fund the leap.
--->
 
 ---
 class: pizza-bottom timeline-slide wide-title
@@ -726,9 +672,6 @@ We came in with a vision, but kept our feet on the ground.
   </div>
 </div>
 
-<!--
-The pitch was intentionally balanced: enough ambition for investors to see upside, enough honesty that it still felt like us.
--->
 
 ---
 class: pizza-bottom timeline-slide wide-title
@@ -738,9 +681,9 @@ class: pizza-bottom timeline-slide wide-title
 
 This was just our experience, but a few patterns showed up quickly.
 
-- Some wanted a bigger swing: "don't you need more?"
-- Social proof changed the room fast
-- Some studied the market deeply. Others wanted a familiar category
+- Some investors wanted a bigger swing: "don't you need more?" We stayed disciplined on scope
+- Social proof changed the room fast. Once one known name was in, others followed
+- Some studied the market deeply; others just wanted a familiar category to compare us to
 
 <blockquote class="talk-signals-quote">
   <p class="talk-signals-quote__text">"The business is the envelope. The real thing is the letter inside."</p>
@@ -779,9 +722,6 @@ This was just our experience, but a few patterns showed up quickly.
   </div>
 </div>
 
-<!--
-This should land as observation, not judgment. Different investors play different games; this is just what became visible once we were in the room.
--->
 
 ---
 class: pizza-bottom timeline-slide wide-title
@@ -827,15 +767,14 @@ The ask itself was actually pretty simple.
   </div>
 </div>
 
-<!--
-This should feel concrete and modest: not a moonshot deck, just a specific proposal to buy enough time to prove the model.
--->
 
 ---
 class: pizza-bottom timeline-slide wide-title
 ---
 
 # Binary caching
+
+We needed a server-backed feature that teams would pay for. Binary caching was the answer.
 
 - Gradle's build cache already proved this is a viable business
 - Project generation gave us the foundation to build on incrementally
@@ -872,9 +811,6 @@ class: pizza-bottom timeline-slide wide-title
   </div>
 </div>
 
-<!--
-Binary caching was the first product idea that felt like a real business. Gradle had already validated the model in the JVM world. We had project generation as a foundation, and Carthage had proven that pre-built binaries could work in the Apple ecosystem. The gap was Swift packages.
--->
 
 ---
 layout: section
@@ -884,13 +820,10 @@ class: section-glow
 <iframe src="/tuist-glow-shader.html" class="section-shader"></iframe>
 
 <div class="talk-section-heading">
-  <span class="noora-badge talk-section-heading__part" data-size="large" data-style="light-fill" data-color="neutral">Part four</span>
+  <span class="noora-badge talk-section-heading__part" data-size="large" data-style="light-fill" data-color="neutral">Part three</span>
   <h1 class="talk-section-heading__title">How we made it happen</h1>
 </div>
 
-<!--
-This section shifts from the pitch itself to the concrete moves that made the business real.
--->
 
 ---
 
@@ -932,9 +865,6 @@ This section shifts from the pitch itself to the concrete moves that made the bu
   </div>
 </div>
 
-<!--
-This is where the proposal becomes execution: choose a stack that compounds a small team, build the infrastructure, and use it ourselves first.
--->
 
 ---
 
@@ -945,6 +875,7 @@ This is where the proposal becomes execution: choose a stack that compounds a sm
 - We made new features adoptable without generated projects, like insights
 - We lowered adoption cost so teams could try things incrementally
 - We let developers experience the product in public, not just watch demos
+- We translated Tuist into the languages our communities are comfortable with
 - The product stopped being "a CLI" and became a platform, with the CLI as one of the interfaces
 
 <div class="talk-center-cta">
@@ -1164,13 +1095,10 @@ class: section-glow
 <iframe src="/tuist-glow-shader.html" class="section-shader"></iframe>
 
 <div class="talk-section-heading">
-  <span class="noora-badge talk-section-heading__part" data-size="large" data-style="light-fill" data-color="neutral">Part five</span>
+  <span class="noora-badge talk-section-heading__part" data-size="large" data-style="light-fill" data-color="neutral">Part four</span>
   <h1 class="talk-section-heading__title">AI happened</h1>
 </div>
 
-<!--
-This is where many developers get stuck. They think there is one "real" business model. There isn't.
--->
 
 ---
 class: quote-bottom
@@ -1187,16 +1115,13 @@ class: quote-bottom
   <p class="talk-openai-quote__text">"If it's 'oh god, I don't want to do this' and 'oh my god, this is hard,' that's a good spot to be in."</p>
   <div class="talk-openai-quote__meta">
     <div class="talk-openai-quote__source">
-      <img src="/openai-logomark.svg" alt="OpenAI logo" class="talk-openai-quote__logo" />
-      <span class="talk-openai-quote__cite">Peter Steinberger</span>
+      <img src="/openclaw.svg" alt="OpenClaw logo" class="talk-openai-quote__logo" />
+      <span class="talk-openai-quote__cite">Peter Steinberger, creator of OpenClaw</span>
     </div>
-    <a href="https://www.youtube.com/watch?v=8lF7HmQ_RgY" class="talk-openai-quote__link">The creator of Clawd: "I ship code I don't read"</a>
+    <a href="https://www.youtube.com/watch?v=8lF7HmQ_RgY" class="talk-openai-quote__link">"I ship code I don't read"</a>
   </div>
 </div>
 
-<!--
-As models get faster, the bottleneck becomes the software delivery system around them. We ended up investing in deep build-system knowledge that many CI and compute companies historically treated as too costly. That depth is now becoming strategically relevant because agents need guidance, selectivity, and confidence.
--->
 
 ---
 class: timeline-slide
@@ -1250,9 +1175,6 @@ We dog-food our own tools, so we're motivated to optimize developer workflows. A
   </div>
 </div>
 
-<!--
-The commit chart shows our velocity increasing dramatically. AI has been a real force multiplier for us. One concrete example is that we rolled out Gradle support in three weeks.
--->
 
 ---
 layout: section
@@ -1262,7 +1184,7 @@ class: section-glow
 <iframe src="/tuist-glow-shader.html" class="section-shader"></iframe>
 
 <div class="talk-section-heading">
-  <span class="noora-badge talk-section-heading__part" data-size="large" data-style="light-fill" data-color="neutral">Part six</span>
+  <span class="noora-badge talk-section-heading__part" data-size="large" data-style="light-fill" data-color="neutral">Part five</span>
   <h1 class="talk-section-heading__title">Today</h1>
 </div>
 
@@ -1309,9 +1231,6 @@ class: timeline-slide
   </div>
 </div>
 
-<!--
-Momentum is finally visible in the business, not just the product. We are close to profitability, more organizations are finding us inbound, and that gives us room to grow the team. The next chapter is not survival, it is executing well against the three big challenges ahead.
--->
 
 ---
 class: timeline-slide
@@ -1366,9 +1285,6 @@ class: timeline-slide
   </div>
 </div>
 
-<!--
-This is one of the hard problems ahead. If developers, CI, and agents are all producing software continuously, then latency stops being a minor annoyance and becomes a product problem. The infrastructure has to be global so workflows stay fast wherever execution starts.
--->
 
 ---
 class: timeline-slide
@@ -1411,9 +1327,6 @@ class: timeline-slide
   </div>
 </div>
 
-<!--
-Compute is the natural next step. CI providers co-locate cache with build machines, which is fast but not distributed. We can flip that: distributed cache first, then bring compute to the edge. Agentic workflows — like automated test analysis or code suggestions — need access to project data, and that means running code in sandboxed environments we control.
--->
 
 ---
 class: timeline-slide
@@ -1457,9 +1370,6 @@ class: timeline-slide
   </div>
 </div>
 
-<!--
-Expanding to new ecosystems is technically cheap now — AI helps us build integrations fast. But reaching developers in those ecosystems is expensive and noisy. We're leaning into video storytelling as our GTM lever because it lets a small team punch above its weight.
--->
 
 ---
 layout: section
@@ -1469,27 +1379,21 @@ class: section-glow
 <iframe src="/tuist-glow-shader.html" class="section-shader"></iframe>
 
 <div class="talk-section-heading">
-  <span class="noora-badge talk-section-heading__part" data-size="large" data-style="light-fill" data-color="neutral">Part seven</span>
+  <span class="noora-badge talk-section-heading__part" data-size="large" data-style="light-fill" data-color="neutral">Part six</span>
   <h1 class="talk-section-heading__title">Wrap up</h1>
 </div>
 
-<!--
-Let's wrap up with the key takeaways from this journey.
--->
 
 ---
 
 # Looking back, looking forward
 
-- **Compound your assets.** Code, expertise, reputation, trust, word of mouth. Each layer is harder to build and harder to copy
 - **Brand travels further than you think.** Tuist grew organically in South Korea 🇰🇷. Local devs gave talks, translated docs, and we closed our first customer there without a single sales call
+- **Compound your assets.** Code, expertise, reputation, trust, word of mouth. Each layer is harder to build and harder to copy
 - **Think about the business earlier.** "Great" doesn't pay rent
 - **Be ready for competition.** Companies that used your OSS for brand recognition can pivot to compete against you
 - **Charge earlier than feels comfortable.** The discomfort of asking for money fades. Running out of runway doesn't
 
-<!--
-Honest reflections after years of building. These are not regrets — just things we see more clearly now. Trust compounds but takes years. Do not trade it away cheaply.
--->
 
 ---
 layout: section
@@ -1503,9 +1407,6 @@ class: section-glow
   <h1 class="talk-section-heading__title">Be yourself</h1>
 </div>
 
-<!--
-Authenticity is the one thing no competitor can copy. Stay true to who you are and why you started.
--->
 
 ---
 layout: center
@@ -1529,6 +1430,3 @@ class: text-center
   </div>
 </div>
 
-<!--
-Happy to chat after the talk if you're building something small, weird, and useful.
--->
