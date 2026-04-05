@@ -21,7 +21,6 @@ keywords: tuist,open-source,business,swift,indie
   </div>
 </div>
 
-
 ---
 
 # About me
@@ -30,7 +29,6 @@ keywords: tuist,open-source,business,swift,indie
 - Doing open source since I can remember
 - Previously at SoundCloud, Shopify, and other companies
 - Now full-time CEO and co-founder of Tuist
-
 
 ---
 
@@ -53,7 +51,6 @@ keywords: tuist,open-source,business,swift,indie
 
 <img src="/what-is-tuist.png" class="slide-right-img" />
 
-
 ---
 class: slide-with-bg
 ---
@@ -65,8 +62,7 @@ class: slide-with-bg
 - 2017: weekend fix for `.pbxproj` pain
 - 2023: went full-time on Tuist
 - 2026: still a small team, now with paying customers
-- You likely have a side project quietly baking already
-
+- **You likely have a side project quietly baking already**
 
 ---
 layout: section
@@ -79,7 +75,6 @@ class: section-glow
   <span class="noora-badge talk-section-heading__part" data-size="large" data-style="light-fill" data-color="neutral">Part one</span>
   <h1 class="talk-section-heading__title">A hobby</h1>
 </div>
-
 
 ---
 class: timeline-slide
@@ -123,7 +118,6 @@ class: timeline-slide
     <span></span>
   </div>
 </div>
-
 
 ---
 class: pizza-bottom timeline-slide wide-title
@@ -175,7 +169,6 @@ class: pizza-bottom timeline-slide wide-title
   </div>
 </div>
 
-
 ---
 class: pizza-bottom timeline-slide wide-title
 ---
@@ -190,7 +183,6 @@ Software is cheap to copy. It is **not** cheap to maintain.
 - Carrying the emotional load when other teams depend on your weekends
 
 See also: [Why We Can't Have Nice Software](https://andrewkelley.me/post/why-we-cant-have-nice-software.html). Software wants to be *finished*, but sustaining it never is.
-
 
 <div class="talk-timeline" style="--timeline-orange-fill: 10%; --timeline-green-fill: 40%;">
   <div class="talk-timeline__labels" aria-hidden="true">
@@ -219,7 +211,6 @@ See also: [Why We Can't Have Nice Software](https://andrewkelley.me/post/why-we-
     <span></span>
   </div>
 </div>
-
 
 ---
 class: pizza-bottom timeline-slide wide-title
@@ -261,7 +252,6 @@ It had taken years and a lot of human capital to build:
     <span></span>
   </div>
 </div>
-
 
 ---
 class: pizza-bottom timeline-slide wide-title
@@ -314,7 +304,6 @@ As Tuist grew, companies approached us about sponsorship deals. It felt like the
   </div>
 </div>
 
-
 ---
 layout: section
 class: section-glow
@@ -326,7 +315,6 @@ class: section-glow
   <span class="noora-badge talk-section-heading__part" data-size="large" data-style="light-fill" data-color="neutral">Part two</span>
   <h1 class="talk-section-heading__title">It can be a business</h1>
 </div>
-
 
 ---
 class: pizza-bottom timeline-slide wide-title
@@ -366,7 +354,6 @@ class: pizza-bottom timeline-slide wide-title
     <span></span>
   </div>
 </div>
-
 
 ---
 class: full-bleed-image
@@ -411,7 +398,6 @@ By 2023, it was no longer a side project.
 
 - We had signals companies would pay for new features
 - I reached out to Marek, still at Shopify
-- We had already decided to go for it
 - Marek joined a bit later, after leaving Shopify
 
 <div class="talk-timeline talk-timeline--with-gray" style="--timeline-orange-fill: 10%; --timeline-green-fill: 65%; --timeline-gray-fill: 67.5%;">
@@ -443,7 +429,6 @@ By 2023, it was no longer a side project.
     <span></span>
   </div>
 </div>
-
 
 ---
 class: pizza-bottom timeline-slide wide-title
@@ -488,7 +473,6 @@ We needed a business model for companies building apps with Xcode at scale.
   </div>
 </div>
 
-
 ---
 class: pizza-bottom timeline-slide wide-title
 ---
@@ -501,7 +485,6 @@ We wanted to stay open, but we also needed time to move value capture toward inf
 - A small CLI extension would be closed source too
 - The plan was to move toward OSS as the market grew and value shifted to operational complexity
 - We also wanted openness to shape how we built the product and company
-- That also reduced early risks: competitors, self-hosting customers, and cloud vendors
 
 <blockquote>
   <p>HashiCorp spent four years building the foundations of its open core model. We had one.</p>
@@ -536,7 +519,6 @@ We wanted to stay open, but we also needed time to move value capture toward inf
     <span></span>
   </div>
 </div>
-
 
 ---
 class: pizza-bottom timeline-slide wide-title
@@ -581,7 +563,6 @@ Because open source lets you capture less per user, but from a much larger marke
   </div>
 </div>
 
-
 ---
 class: pizza-bottom timeline-slide wide-title
 ---
@@ -624,7 +605,6 @@ We had already closed some enterprise customers. The problem was time.
     <span></span>
   </div>
 </div>
-
 
 ---
 class: pizza-bottom timeline-slide wide-title
@@ -671,7 +651,6 @@ We came in with a vision, but kept our feet on the ground.
     <span></span>
   </div>
 </div>
-
 
 ---
 class: pizza-bottom timeline-slide wide-title
@@ -722,7 +701,6 @@ This was just our experience, but a few patterns showed up quickly.
   </div>
 </div>
 
-
 ---
 class: pizza-bottom timeline-slide wide-title
 ---
@@ -767,7 +745,6 @@ The ask itself was actually pretty simple.
   </div>
 </div>
 
-
 ---
 class: pizza-bottom timeline-slide wide-title
 ---
@@ -811,7 +788,6 @@ We needed a server-backed feature that teams would pay for. Binary caching was t
   </div>
 </div>
 
-
 ---
 layout: section
 class: section-glow
@@ -823,7 +799,6 @@ class: section-glow
   <span class="noora-badge talk-section-heading__part" data-size="large" data-style="light-fill" data-color="neutral">Part three</span>
   <h1 class="talk-section-heading__title">How we made it happen</h1>
 </div>
-
 
 ---
 
@@ -864,7 +839,6 @@ class: section-glow
     <span></span>
   </div>
 </div>
-
 
 ---
 
@@ -1050,7 +1024,6 @@ class: website-grid-slide
   <div data-part="code">
     <pre><code>plugins {
   id("dev.tuist")
-  version "0.1.0"
 }</code></pre>
   </div>
 </div>
@@ -1086,7 +1059,6 @@ class: website-grid-slide
   </div>
 </div>
 
-
 ---
 layout: section
 class: section-glow
@@ -1099,12 +1071,11 @@ class: section-glow
   <h1 class="talk-section-heading__title">AI happened</h1>
 </div>
 
-
 ---
 class: quote-bottom
 ---
 
-# Inference getting faster pulls us into the stack
+# AI pulls us deeper into the stack
 
 - Faster inference makes slow workflows feel broken.
 - More and faster compute helps, but it is expensive and capped.
@@ -1121,7 +1092,6 @@ class: quote-bottom
     <a href="https://www.youtube.com/watch?v=8lF7HmQ_RgY" class="talk-openai-quote__link">"I ship code I don't read"</a>
   </div>
 </div>
-
 
 ---
 class: timeline-slide
@@ -1174,7 +1144,6 @@ We dog-food our own tools, so we're motivated to optimize developer workflows. A
     <span></span>
   </div>
 </div>
-
 
 ---
 layout: section
@@ -1231,7 +1200,6 @@ class: timeline-slide
   </div>
 </div>
 
-
 ---
 class: timeline-slide
 ---
@@ -1285,7 +1253,6 @@ class: timeline-slide
   </div>
 </div>
 
-
 ---
 class: timeline-slide
 ---
@@ -1326,7 +1293,6 @@ class: timeline-slide
     <span></span>
   </div>
 </div>
-
 
 ---
 class: timeline-slide
@@ -1370,7 +1336,6 @@ class: timeline-slide
   </div>
 </div>
 
-
 ---
 layout: section
 class: section-glow
@@ -1383,7 +1348,6 @@ class: section-glow
   <h1 class="talk-section-heading__title">Wrap up</h1>
 </div>
 
-
 ---
 
 # Looking back, looking forward
@@ -1393,7 +1357,6 @@ class: section-glow
 - **Think about the business earlier.** "Great" doesn't pay rent
 - **Be ready for competition.** Companies that used your OSS for brand recognition can pivot to compete against you
 - **Charge earlier than feels comfortable.** The discomfort of asking for money fades. Running out of runway doesn't
-
 
 ---
 layout: section
@@ -1406,7 +1369,6 @@ class: section-glow
   <span class="noora-badge talk-section-heading__part" data-size="large" data-style="light-fill" data-color="neutral">Most importantly</span>
   <h1 class="talk-section-heading__title">Be yourself</h1>
 </div>
-
 
 ---
 layout: center

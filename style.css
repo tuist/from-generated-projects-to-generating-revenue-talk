@@ -680,7 +680,8 @@ body,
   padding: 0 !important;
 }
 
-.talk-terminal-window > [data-part="code"] > pre > code {
+.talk-terminal-window > [data-part="code"] > pre > code,
+.talk-terminal-window > [data-part="code"] > code {
   display: block;
   background: none;
   padding: 0;
