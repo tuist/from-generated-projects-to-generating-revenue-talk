@@ -516,52 +516,6 @@ We had already closed some enterprise customers. The problem was time.
 class: pizza-bottom timeline-slide wide-title
 ---
 
-# We pitched the upside, honestly
-
-We came in with a vision, but kept our feet on the ground.
-
-- **What sounded good:** we already had users and companies using Tuist
-- **What sounded good:** we had shown we could build
-- **What sounded good:** our solutions could go beyond the Apple ecosystem
-- **What sounded good:** the long-term market was all software organizations
-- **What we were honest about:** we weren't going to play the raise-for-the-sake-of-raising game
-- **What we were honest about:** long-term, we wanted to be fully OSS
-- **What we were honest about:** it was our first time founding a company
-
-<div class="talk-timeline talk-timeline--with-gray" style="--timeline-orange-fill: 10%; --timeline-green-fill: 65%; --timeline-gray-fill: 75%;">
-  <div class="talk-timeline__labels" aria-hidden="true">
-    <span>2017</span>
-    <span>2018</span>
-    <span>2019</span>
-    <span>2020</span>
-    <span>2021</span>
-    <span>2022</span>
-    <span class="is-active">2023</span>
-    <span>2024</span>
-    <span>2025</span>
-    <span>2026</span>
-  </div>
-  <div class="talk-timeline__track">
-    <span class="talk-timeline__segment talk-timeline__segment--gray"></span>
-  </div>
-  <div class="talk-timeline__events" aria-hidden="true">
-    <span><img src="/soundcloud.svg" class="talk-timeline__logo soundcloud" alt="" /></span>
-    <span><img src="/shopify.svg" class="talk-timeline__logo shopify" alt="" /></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span><img src="/german-government.svg" class="talk-timeline__logo government" alt="" /></span>
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-</div>
-
----
-class: pizza-bottom timeline-slide wide-title
----
-
 # Our proposal
 
 The ask itself was actually pretty simple.
