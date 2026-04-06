@@ -524,49 +524,6 @@ We wanted to stay open, but we also needed time to move value capture toward inf
 class: pizza-bottom timeline-slide wide-title
 ---
 
-# Why not just go closed source?
-
-Because open source lets you capture less per user, but from a much larger market.
-
-- Closed source would have made value capture simpler
-- But open source gave us access to a much larger market
-- And it made the product stronger through trust, adoption, and contribution
-- So we wanted to capture value around operating it at scale
-
-<div class="talk-timeline talk-timeline--with-gray" style="--timeline-orange-fill: 10%; --timeline-green-fill: 65%; --timeline-gray-fill: 67.5%;">
-  <div class="talk-timeline__labels" aria-hidden="true">
-    <span>2017</span>
-    <span>2018</span>
-    <span>2019</span>
-    <span>2020</span>
-    <span>2021</span>
-    <span>2022</span>
-    <span class="is-active">2023</span>
-    <span>2024</span>
-    <span>2025</span>
-    <span>2026</span>
-  </div>
-  <div class="talk-timeline__track">
-    <span class="talk-timeline__segment talk-timeline__segment--gray"></span>
-  </div>
-  <div class="talk-timeline__events" aria-hidden="true">
-    <span><img src="/soundcloud.svg" class="talk-timeline__logo soundcloud" alt="" /></span>
-    <span><img src="/shopify.svg" class="talk-timeline__logo shopify" alt="" /></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span><img src="/german-government.svg" class="talk-timeline__logo government" alt="" /></span>
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-</div>
-
----
-class: pizza-bottom timeline-slide wide-title
----
-
 # We had demand, but not enough runway
 
 We had already closed some enterprise customers. The problem was time.
@@ -808,6 +765,7 @@ class: section-glow
 - We shipped cache and insights for builds, tests, and bundles
 - We dog-fooded everything: Tuist running on Tuist
 - We moved the CLI, design system, server, and app into one monorepo
+- We continuously release changes to get feedback fast
 
 <div class="talk-timeline talk-timeline--with-gray" style="--timeline-orange-fill: 10%; --timeline-green-fill: 65%; --timeline-gray-fill: 75%; --timeline-invested-fill: 82.5%;">
   <div class="talk-timeline__labels" aria-hidden="true">
