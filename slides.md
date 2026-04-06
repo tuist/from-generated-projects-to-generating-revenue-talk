@@ -254,57 +254,6 @@ It had taken years and a lot of human capital to build:
 </div>
 
 ---
-class: pizza-bottom timeline-slide wide-title
----
-
-# Donations felt like the obvious answer
-
-As Tuist grew, companies approached us about sponsorship deals. It felt like the easy path.
-
-- We felt a gravitational pull toward a donation or sponsorship model
-- It pairs nicely with low confidence in your ability to build a business
-- The value exchange is deeply unbalanced
-- We get peanuts; they get distribution, goodwill, and a "Company X supports Tuist" story
-
-<div class="talk-message-window">
-  <div data-part="bar">
-    <span data-part="label">Sponsorship pitch</span>
-  </div>
-  <div data-part="body">
-    <p>Hi,</p>
-    <p>We thought you might be interested in doing a few posts a month about us. We can donate $50 a month.</p>
-  </div>
-</div>
-
-<div class="talk-timeline" style="--timeline-orange-fill: 10%; --timeline-green-fill: 55%;">
-  <div class="talk-timeline__labels" aria-hidden="true">
-    <span>2017</span>
-    <span>2018</span>
-    <span>2019</span>
-    <span>2020</span>
-    <span>2021</span>
-    <span class="is-active">2022</span>
-    <span>2023</span>
-    <span>2024</span>
-    <span>2025</span>
-    <span>2026</span>
-  </div>
-  <div class="talk-timeline__track"></div>
-  <div class="talk-timeline__events" aria-hidden="true">
-    <span><img src="/soundcloud.svg" class="talk-timeline__logo soundcloud" alt="" /></span>
-    <span><img src="/shopify.svg" class="talk-timeline__logo shopify" alt="" /></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-</div>
-
----
 layout: section
 class: section-glow
 ---
@@ -613,55 +562,6 @@ We came in with a vision, but kept our feet on the ground.
 class: pizza-bottom timeline-slide wide-title
 ---
 
-# A few things we learned
-
-This was just our experience, but a few patterns showed up quickly.
-
-- Some investors wanted a bigger swing: "don't you need more?" We stayed disciplined on scope
-- Social proof changed the room fast. Once one known name was in, others followed
-- Some studied the market deeply; others just wanted a familiar category to compare us to
-
-<blockquote class="talk-signals-quote">
-  <p class="talk-signals-quote__text">"The business is the envelope. The real thing is the letter inside."</p>
-  <p class="talk-signals-quote__eyebrow">Jason Fried, 37signals</p>
-  <p class="talk-signals-quote__body">That framing stayed with us: raise enough to keep building the product, but don't let the envelope become the point.</p>
-  <p class="talk-signals-quote__source"><a href="https://www.youtube.com/watch?v=BdDCtMA1gSw" target="_blank" rel="noreferrer">Interview</a></p>
-</blockquote>
-
-<div class="talk-timeline talk-timeline--with-gray" style="--timeline-orange-fill: 10%; --timeline-green-fill: 65%; --timeline-gray-fill: 75%;">
-  <div class="talk-timeline__labels" aria-hidden="true">
-    <span>2017</span>
-    <span>2018</span>
-    <span>2019</span>
-    <span>2020</span>
-    <span>2021</span>
-    <span>2022</span>
-    <span class="is-active">2023</span>
-    <span>2024</span>
-    <span>2025</span>
-    <span>2026</span>
-  </div>
-  <div class="talk-timeline__track">
-    <span class="talk-timeline__segment talk-timeline__segment--gray"></span>
-  </div>
-  <div class="talk-timeline__events" aria-hidden="true">
-    <span><img src="/soundcloud.svg" class="talk-timeline__logo soundcloud" alt="" /></span>
-    <span><img src="/shopify.svg" class="talk-timeline__logo shopify" alt="" /></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span><img src="/german-government.svg" class="talk-timeline__logo government" alt="" /></span>
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-</div>
-
----
-class: pizza-bottom timeline-slide wide-title
----
-
 # Our proposal
 
 The ask itself was actually pretty simple.
@@ -894,29 +794,6 @@ class: section-glow
     <span></span>
     <span></span>
   </div>
-</div>
-
----
-class: website-grid-slide
----
-
-<div class="talk-website-grid">
-  <figure class="talk-website-grid__item">
-    <img src="/website-2018.png" alt="Tuist website in 2018" />
-    <figcaption>2018</figcaption>
-  </figure>
-  <figure class="talk-website-grid__item">
-    <img src="/website-2019.png" alt="Tuist website in 2019" />
-    <figcaption>2019</figcaption>
-  </figure>
-  <figure class="talk-website-grid__item">
-    <img src="/website-2021.png" alt="Tuist website in 2021" />
-    <figcaption>2021</figcaption>
-  </figure>
-  <figure class="talk-website-grid__item">
-    <img src="/website-2026.png" alt="Tuist website in 2026" />
-    <figcaption>2026</figcaption>
-  </figure>
 </div>
 
 ---
