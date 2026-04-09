@@ -894,7 +894,7 @@ class: timeline-slide
 We dog-food our own tools, so we're motivated to optimize developer workflows. AI agents let us ship faster with the same team.
 
 - A concrete example: we rolled out Gradle support in **3 weeks**
-- We ship without committees and stay close to customers
+- No approval chains: customer feedback goes straight into the product
 - AI does **not** replace taste, trust, or customer understanding. It multiplies everything else.
 
 </div>
