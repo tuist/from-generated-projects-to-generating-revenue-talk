@@ -1208,3 +1208,18 @@ body,
   z-index: 0;
   pointer-events: none;
 }
+
+.slidev-layout::after {
+  content: "@pepicrft  ·  @pedro@mastodon.pepicrft  ·  @tuist@fosstodon.org";
+  position: absolute;
+  bottom: var(--noora-spacing-4);
+  right: var(--noora-spacing-6);
+  font: var(--noora-font-weight-regular) var(--noora-font-body-small);
+  color: var(--noora-surface-label-secondary);
+  pointer-events: none;
+  z-index: 50;
+}
+
+.slidev-layout.section-glow::after {
+  color: rgba(255, 255, 255, 0.8);
+}

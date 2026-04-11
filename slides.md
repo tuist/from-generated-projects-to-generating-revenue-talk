@@ -59,10 +59,7 @@ class: slide-with-bg
 
 # Why this story might matter to you
 
-- 2017: weekend fix for `.pbxproj` pain
-- 2023: went full-time on Tuist
-- 2026: still a small team, now with paying customers
-- **You likely have a side project quietly baking already**
+**You likely have a side project quietly baking already.**
 
 ---
 layout: section
@@ -183,6 +180,11 @@ Software is cheap to copy. It is **not** cheap to maintain.
 - Carrying the emotional load when other teams depend on your weekends
 
 See also: [Why We Can't Have Nice Software](https://andrewkelley.me/post/why-we-cant-have-nice-software.html). Software wants to be *finished*, but sustaining it never is.
+
+<blockquote class="talk-pizza-callout">
+  <p>🍕 Deep dish takes 45 minutes in the oven.</p>
+  <p>Open source takes years. Neither can be rushed.</p>
+</blockquote>
 
 <div class="talk-timeline" style="--timeline-orange-fill: 10%; --timeline-green-fill: 40%;">
   <div class="talk-timeline__labels" aria-hidden="true">
@@ -620,6 +622,11 @@ class: section-glow
 - We dog-fooded everything: Tuist running on Tuist
 - We moved the CLI, design system, server, and app into one monorepo
 - We continuously release changes to get feedback fast
+
+<blockquote class="talk-pizza-callout">
+  <p>🍕 Every great deep dish starts with the crust.</p>
+  <p>Ours was project generation.</p>
+</blockquote>
 
 <div class="talk-timeline talk-timeline--with-gray" style="--timeline-orange-fill: 10%; --timeline-green-fill: 65%; --timeline-gray-fill: 75%; --timeline-invested-fill: 82.5%;">
   <div class="talk-timeline__labels" aria-hidden="true">
@@ -1146,6 +1153,11 @@ class: section-glow
 - **Think about the business earlier.** "Great" doesn't pay rent
 - **Be ready for competition.** Companies that used your OSS for brand recognition can pivot to compete against you
 - **Charge earlier than feels comfortable.** The discomfort of asking for money fades. Running out of runway doesn't
+
+<blockquote class="talk-pizza-callout">
+  <p>🍕 A deep dish is built layer by layer.</p>
+  <p>So is a business.</p>
+</blockquote>
 
 ---
 layout: section
