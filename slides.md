@@ -29,6 +29,7 @@ keywords: tuist,open-source,business,swift,indie
 - Doing open source since I can remember
 - Previously at SoundCloud, Shopify, and other companies
 - Now full-time CEO and co-founder of Tuist
+- First sales experience was selling churros at my family's cafe
 
 ---
 
@@ -181,10 +182,6 @@ Software is cheap to copy. It is **not** cheap to maintain.
 
 See also: [Why We Can't Have Nice Software](https://andrewkelley.me/post/why-we-cant-have-nice-software.html). Software wants to be *finished*, but sustaining it never is.
 
-<blockquote class="talk-pizza-callout">
-  <p>🍕 Deep dish takes 45 minutes in the oven.</p>
-  <p>Open source takes years. Neither can be rushed.</p>
-</blockquote>
 
 <div class="talk-timeline" style="--timeline-orange-fill: 10%; --timeline-green-fill: 40%;">
   <div class="talk-timeline__labels" aria-hidden="true">
@@ -758,6 +755,12 @@ class: section-glow
 </div>
 
 ---
+class: full-bleed-image
+---
+
+<img src="/apple-featured.png" class="talk-full-bleed-image" alt="Tuist featured on Apple's website" />
+
+---
 
 # Marketing
 
@@ -1192,4 +1195,3 @@ class: text-center
     </a>
   </div>
 </div>
-
