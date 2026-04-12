@@ -379,6 +379,12 @@ By 2023, it was no longer a side project.
 </div>
 
 ---
+class: full-bleed-image
+---
+
+<img src="/longevity-manifesto.png" class="talk-full-bleed-image" alt="Tuist Longevity Manifesto" />
+
+---
 class: pizza-bottom timeline-slide wide-title
 ---
 
@@ -1103,6 +1109,48 @@ class: timeline-slide
 - Bazel is next; long-term we plan to integrate with every build system (<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" style="display:inline;height:1.2em;vertical-align:middle"><path fill="#76d275" d="m32 0 32 32-32 32L0 32Z"/><path fill="#43a047" d="M0 32v32l32 32V64Z"/><path fill="#76d275" d="m96 0 32 32-32 32-32-32Z"/><path fill="#43a047" d="M128 32v32L96 96V64Zm-64 0 32 32-32 32-32-32Z"/><path fill="#00701a" d="M64 96v32L32 96V64Z"/><path fill="#004300" d="m64 96 32-32v32l-32 32Z"/></svg>, <img src="/rust.svg" style="display:inline;height:1.2em;vertical-align:middle" />, <img src="/go.svg" style="display:inline;height:1.2em;vertical-align:middle" />, <img src="/elixir.svg" style="display:inline;height:1.2em;vertical-align:middle" />)
 - GTM is still too costly with too much noise
 - Betting on video-based storytelling (limited resources breed creativity)
+
+<div class="talk-timeline talk-timeline--with-gray" style="--timeline-orange-fill: 10%; --timeline-green-fill: 65%; --timeline-gray-fill: 75%; --timeline-invested-fill: 100%;">
+  <div class="talk-timeline__labels" aria-hidden="true">
+    <span>2017</span>
+    <span>2018</span>
+    <span>2019</span>
+    <span>2020</span>
+    <span>2021</span>
+    <span>2022</span>
+    <span>2023</span>
+    <span>2024</span>
+    <span>2025</span>
+    <span class="is-active">2026</span>
+  </div>
+  <div class="talk-timeline__track">
+    <span class="talk-timeline__segment talk-timeline__segment--gray"></span>
+    <span class="talk-timeline__segment talk-timeline__segment--invested"></span>
+  </div>
+  <div class="talk-timeline__events" aria-hidden="true">
+    <span><img src="/soundcloud.svg" class="talk-timeline__logo soundcloud" alt="" /></span>
+    <span><img src="/shopify.svg" class="talk-timeline__logo shopify" alt="" /></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span><img src="/german-government.svg" class="talk-timeline__logo government" alt="" /></span>
+    <span><span class="talk-timeline__symbol invested">$</span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+---
+class: timeline-slide
+---
+
+# #4 Close the productivity loop for agents
+
+- Agents write code, but they still need to know what to build, test, and skip
+- We sit at the intersection of project structure, build graphs, and test data
+- That makes Tuist a natural feedback layer for agentic workflows
+- The loop: agent writes code, Tuist builds/tests/caches, results flow back to the agent
 
 <div class="talk-timeline talk-timeline--with-gray" style="--timeline-orange-fill: 10%; --timeline-green-fill: 65%; --timeline-gray-fill: 75%; --timeline-invested-fill: 100%;">
   <div class="talk-timeline__labels" aria-hidden="true">
