@@ -1145,12 +1145,14 @@ class: timeline-slide
 class: timeline-slide
 ---
 
-# #4 Close the productivity loop for agents
+# #4 Let agents act on the data for you
 
-- Agents write code, but they still need to know what to build, test, and skip
-- We sit at the intersection of project structure, build graphs, and test data
-- That makes Tuist a natural feedback layer for agentic workflows
-- The loop: agent writes code, Tuist builds/tests/caches, results flow back to the agent
+- We have the data: build graphs, test results, flakiness, and project structure
+- Models have deep knowledge that we augment with our learnings about every build toolchain
+- Combined, we can act on your behalf and put your project on autopilot:
+  - Fix flaky tests automatically
+  - Optimize your architecture to get the most out of compute resources
+  - Improve project configuration to speed up builds
 
 <div class="talk-timeline talk-timeline--with-gray" style="--timeline-orange-fill: 10%; --timeline-green-fill: 65%; --timeline-gray-fill: 75%; --timeline-invested-fill: 100%;">
   <div class="talk-timeline__labels" aria-hidden="true">
@@ -1180,6 +1182,20 @@ class: timeline-slide
     <span><span class="talk-timeline__symbol invested">$</span></span>
     <span></span>
     <span></span>
+  </div>
+</div>
+
+---
+class: demo-slide
+---
+
+<div class="talk-terminal-window" style="max-height: 100%; overflow: hidden;">
+  <div data-part="bar">
+    <span data-part="traffic-lights"><span></span><span></span><span></span></span>
+    <span data-part="title">Fix the most flaky tests</span>
+  </div>
+  <div data-part="code" style="padding: 0; overflow: hidden; border-radius: var(--noora-radius-medium); max-height: 80vh;">
+    <img src="/claude-tuist-demo.gif" style="width: 100%; display: block; margin-bottom: -15%;" alt="Claude Code running with Tuist MCP" />
   </div>
 </div>
 
