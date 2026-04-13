@@ -32,6 +32,54 @@ keywords: tuist,open-source,business,swift,indie
 - First sales experience was selling churros at my family's cafe
 
 ---
+layout: section
+class: section-glow
+---
+
+<iframe src="/tuist-glow-shader.html" class="section-shader"></iframe>
+
+<div class="talk-section-heading">
+  <span class="noora-badge talk-section-heading__part" data-size="large" data-style="light-fill" data-color="neutral">/twɪst/</span>
+  <h1 class="talk-section-heading__title">How do you pronounce Tuist?</h1>
+</div>
+
+---
+class: demo-slide
+---
+
+<div class="talk-terminal-window" style="max-width: 60%; max-height: 100%; overflow: hidden;">
+  <div data-part="bar">
+    <span data-part="traffic-lights"><span></span><span></span><span></span></span>
+    <span data-part="title">Asking Claude how to pronounce Tuist</span>
+  </div>
+  <div data-part="code" style="padding: 0; overflow: hidden; border-radius: var(--noora-radius-medium);">
+    <img src="/tuist-pronunciation-claude.png" style="width: 100%; display: block;" alt="Claude explaining the pronunciation of Tuist" />
+  </div>
+</div>
+
+---
+layout: section
+class: section-glow
+---
+
+<iframe src="/tuist-glow-shader.html" class="section-shader"></iframe>
+
+<div class="talk-section-heading">
+  <h1 class="talk-section-heading__title">Where does it come from?</h1>
+</div>
+
+---
+layout: section
+class: section-glow
+---
+
+<iframe src="/tuist-glow-shader.html" class="section-shader"></iframe>
+
+<div class="talk-section-heading">
+  <h1 class="talk-section-heading__title">Build + Test = Tuist</h1>
+</div>
+
+---
 
 <div style="max-width: 55%;">
 
@@ -603,6 +651,12 @@ We needed a server-backed feature that teams would pay for. Binary caching was t
     <span></span>
   </div>
 </div>
+
+---
+class: full-bleed-image
+---
+
+<img src="/binary-caching-demo.gif" class="talk-full-bleed-image" style="object-fit: contain;" alt="Binary caching demo" />
 
 ---
 layout: section

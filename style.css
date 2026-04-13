@@ -1234,6 +1234,11 @@ body,
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+}
+
+.slidev-layout.demo-slide > .talk-terminal-window {
+  width: 100%;
 }
 
 .section-shader {
