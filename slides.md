@@ -1005,6 +1005,12 @@ We dog-food our own tools, so we're motivated to optimize developer workflows. A
 </div>
 
 ---
+class: full-bleed-image
+---
+
+<img src="/ai-productivity-demo.gif" class="talk-full-bleed-image" style="object-fit: contain;" alt="AI productivity demo" />
+
+---
 layout: section
 class: section-glow
 ---
